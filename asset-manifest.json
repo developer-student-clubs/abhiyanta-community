@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Abhiyanta-Community.github.io/static/css/main.5f361e03.chunk.css",
+    "main.js": "/Abhiyanta-Community.github.io/static/js/main.41a13239.chunk.js",
+    "main.js.map": "/Abhiyanta-Community.github.io/static/js/main.41a13239.chunk.js.map",
+    "runtime-main.js": "/Abhiyanta-Community.github.io/static/js/runtime-main.b4c6bfba.js",
+    "runtime-main.js.map": "/Abhiyanta-Community.github.io/static/js/runtime-main.b4c6bfba.js.map",
+    "static/js/2.5c7c9de4.chunk.js": "/Abhiyanta-Community.github.io/static/js/2.5c7c9de4.chunk.js",
+    "static/js/2.5c7c9de4.chunk.js.map": "/Abhiyanta-Community.github.io/static/js/2.5c7c9de4.chunk.js.map",
+    "index.html": "/Abhiyanta-Community.github.io/index.html",
+    "precache-manifest.f4ce49f8f518cecb714d8b755d582447.js": "/Abhiyanta-Community.github.io/precache-manifest.f4ce49f8f518cecb714d8b755d582447.js",
+    "service-worker.js": "/Abhiyanta-Community.github.io/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/Abhiyanta-Community.github.io/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.5c7c9de4.chunk.js.LICENSE.txt": "/Abhiyanta-Community.github.io/static/js/2.5c7c9de4.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/Abhiyanta-Community.github.io/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b4c6bfba.js",
+    "static/js/2.5c7c9de4.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.41a13239.chunk.js"
+  ]
+}
