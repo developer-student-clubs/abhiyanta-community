@@ -4,6 +4,7 @@ import AppRoute from "./utils/AppRoute";
 import ScrollReveal from "./utils/ScrollReveal";
 import ReactGA from "react-ga";
 
+
 // Layouts
 import LayoutDefault from "./layouts/LayoutDefault";
 
@@ -14,6 +15,7 @@ import About from "./Pages/About";
 import Faq from "./Pages/Faq";
 import Notfound from "./Pages/NotFound";
 import Team from "./Pages/Team";
+import Project from "./Pages/Project";
 
 // Initialize Google Analytics
 ReactGA.initialize(process.env.REACT_APP_GA_CODE);
@@ -48,6 +50,7 @@ const App = () => {
             layout={LayoutDefault}
           />
           <AppRoute exact path="/faq" component={Faq} layout={LayoutDefault} />
+          <AppRoute exact path="/project" component={Project} layout={LayoutDefault} />
           <AppRoute
             exact
             path="/team"
@@ -67,3 +70,5 @@ const App = () => {
 };
 
 export default App;
+
+
