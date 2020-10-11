@@ -112,6 +112,11 @@ const Header = ({
                     )}
                   >
                     <li>
+                      <Link to="/" onClick={closeMenu}>
+                        Home
+                      </Link>
+                    </li>
+                    <li>
                       <Link to="/team" onClick={closeMenu}>
                         Team
                       </Link>
