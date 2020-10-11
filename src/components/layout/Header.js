@@ -124,6 +124,11 @@ const Header = ({
                     </li>
 
                     <li>
+                      <Link to="/contact" onClick={closeMenu}>
+                        Contact Us
+                      </Link>
+                    </li>
+                    <li>
                       <Link to="/about" onClick={closeMenu}>
                         About
                       </Link>
