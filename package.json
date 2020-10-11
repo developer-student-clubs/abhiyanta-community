@@ -2,7 +2,6 @@
   "name": "abhiyanta",
   "version": "0.1.0",
   "private": true,
-  "homepage": "Abhiyanta-Community.github.io",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
@@ -14,7 +13,11 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.3",
+    "react-ga": "^2.7.0",
+    "classnames": "^2.2.6",
+    "lodash": "^4.17.20",
+    "node-sass": "^4.14.1"
   },
   "scripts": {
     "start": "react-scripts start",
