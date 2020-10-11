@@ -21,7 +21,7 @@ function NotFound() {
   return (
     <Container className={classes.root}>
       <Box>
-        <img className={classes.image} src={process.env.PUBLIC_URL + '/Asserts/404.png'} alt="404 " />
+        <img className={classes.image} src={process.env.PUBLIC_URL + '/Assets/404.png'} alt="404 " />
         <Button
           style={{ margin: "auto", display: "flex", fontSize: "140%" }}
           href="/"
