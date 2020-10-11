@@ -1,6 +1,6 @@
 import React from "react";
 
-import TeamMemberCard from "../Componnts/TeamMemberCard";
+import TeamMemberCard from "../Components/TeamMemberCard";
 import { Grid, Container } from "@material-ui/core";
 
 const team = [
