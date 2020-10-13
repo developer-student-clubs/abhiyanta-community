@@ -60,10 +60,11 @@ function Contact() {
        
 <iframe className={classes.form} src="https://docs.google.com/forms/d/e/1FAIpQLSeunMIVOtBwmVF-IFLI924A6XCPPg2R52fwK5iWC1UX_K_cNg/viewform?embedded=true" width="640" height="673" frameborder="0" marginheight="0" marginwidth="0">
               {/* <div className={classes.root, classes.textField}>
+        <div className={classes.root + ' ' + classes.textField}>
             <div className={classes.Box}>
                 
                 <div className={classes.textField}>
-                    <h1 className={classes.heading}><strong>Conatact Us</strong></h1>
+                    <h1 className={classes.heading}><strong>Contact Us</strong></h1>
                 </div>
                 <TextField
                     label="Full Name"
@@ -91,7 +92,7 @@ function Contact() {
                     // size="large"
                     variant="contained"
                     color="primary"
-                    className={classes.button,classes.textField}
+                    className={classes.button + ' ' + classes.textField}
                     endIcon={<Icon />}>
                     Send</Button>
                 </div>
