@@ -51,11 +51,11 @@ function Contact() {
     const classes = useStyles();
 
     return (
-        <div className={classes.root, classes.textField}>
+        <div className={classes.root + ' ' + classes.textField}>
             <div className={classes.Box}>
                 
                 <div className={classes.textField}>
-                    <h1 className={classes.heading}><strong>Conatact Us</strong></h1>
+                    <h1 className={classes.heading}><strong>Contact Us</strong></h1>
                 </div>
                 <TextField
                     label="Full Name"
@@ -83,7 +83,7 @@ function Contact() {
                     // size="large"
                     variant="contained"
                     color="primary"
-                    className={classes.button,classes.textField}
+                    className={classes.button + ' ' + classes.textField}
                     endIcon={<Icon />}>
                     Send</Button>
                 </div>
