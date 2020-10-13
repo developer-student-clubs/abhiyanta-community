@@ -1,10 +1,10 @@
 import React from "react";
 // import sections
-import Hero from "../Components/sections/Hero";
-import FeaturesTiles from "../Components/sections/FeaturesTiles";
-import FeaturesSplit from "../Components/sections/FeaturesSplit";
-import Testimonial from "../Components/sections/Testimonial";
-import Cta from "../Components/sections/Cta";
+import Hero from "../Templates/sections/Hero";
+import FeaturesTiles from "../Templates/sections/FeaturesTiles";
+import FeaturesSplit from "../Templates/sections/FeaturesSplit";
+import Testimonial from "../Templates/sections/Testimonial";
+import Cta from "../Templates/sections/Cta";
 
 
 
