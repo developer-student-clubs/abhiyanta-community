@@ -1,5 +1,4 @@
 import React from "react";
-
 import TeamMemberCard from "../Components/TeamMemberCard";
 import { Grid, Container, Box } from "@material-ui/core";
 
