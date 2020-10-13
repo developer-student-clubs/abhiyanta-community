@@ -43,6 +43,12 @@ const useStyles = makeStyles((theme) => ({
     heading:{
         marginLeft:"500px",
         color:"black",
+    },
+    form:{
+        height:"1100px",
+        position:"relative",
+        left:"560px",
+        top:"140px"
     }
 }));
 
@@ -51,7 +57,9 @@ function Contact() {
     const classes = useStyles();
 
     return (
-        <div className={classes.root, classes.textField}>
+       
+<iframe className={classes.form} src="https://docs.google.com/forms/d/e/1FAIpQLSeunMIVOtBwmVF-IFLI924A6XCPPg2R52fwK5iWC1UX_K_cNg/viewform?embedded=true" width="640" height="673" frameborder="0" marginheight="0" marginwidth="0">
+              {/* <div className={classes.root, classes.textField}>
             <div className={classes.Box}>
                 
                 <div className={classes.textField}>
@@ -88,7 +96,8 @@ function Contact() {
                     Send</Button>
                 </div>
             </div>
-        </div>
+        </div> */}
+        </iframe>
 
     );
 }
