@@ -19,7 +19,7 @@ function Contact() {
 
     return (
 
-        <iframe id="googleform" className={classes.form} src="https://docs.google.com/forms/d/e/1FAIpQLSeunMIVOtBwmVF-IFLI924A6XCPPg2R52fwK5iWC1UX_K_cNg/viewform?embedded=true" width="640" height="673" frameborder="0" marginheight="0" marginwidth="0">
+        <iframe title="contactPage" className={classes.form} src="https://docs.google.com/forms/d/e/1FAIpQLSeunMIVOtBwmVF-IFLI924A6XCPPg2R52fwK5iWC1UX_K_cNg/viewform?embedded=true" width="640" height="673" frameborder="0" marginheight="0" marginwidth="0">
 
         </iframe>
 
