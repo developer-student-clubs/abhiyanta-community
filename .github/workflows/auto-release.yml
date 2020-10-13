@@ -18,7 +18,7 @@ jobs:
         run: |
           npm install
           npm run build
-          tar -czvf release_{{ github.ref }}.zip build/
+          tar -czvf release_${{ github.sha }}.zip build/
 
       - name: Create Release
         id: create_release
