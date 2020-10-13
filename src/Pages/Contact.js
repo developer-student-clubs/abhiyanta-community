@@ -7,47 +7,47 @@ import TextField from '@material-ui/core/TextField';
 
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-        display: 'flex',
-        flexWrap: 'wrap',
-    },
-    margin: {
-        margin: theme.spacing(1),
-    },
-    button: {
-        margin: theme.spacing(1),
-    },
-    alignButton:{
-        marginLeft:"10%",
-        marginTop:"2px",
-    },
-    textField: {
-        marginLeft: theme.spacing(1),
-        marginRight: theme.spacing(1),
-        width: '118ch',
-    },
-    Box:{
-        backgroundColor:"white",
-        opacity:"0.7",
-        boxShadow:"0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
-        borderRadius:"10px",
-        width:"120ch",
-        height:"30ch",
-        position:"relative",
-        left:"15%",
-        top:"150px",
-    },
-    arrangeBox:{
-        marginLeft:"10%",
-    },
-    heading:{
-        marginLeft:"500px",
-        color:"black",
-    },
+    // root: {
+    //     display: 'flex',
+    //     flexWrap: 'wrap',
+    // },
+    // margin: {
+    //     margin: theme.spacing(1),
+    // },
+    // button: {
+    //     margin: theme.spacing(1),
+    // },
+    // alignButton:{
+    //     marginLeft:"10%",
+    //     marginTop:"2px",
+    // },
+    // textField: {
+    //     marginLeft: theme.spacing(1),
+    //     marginRight: theme.spacing(1),
+    //     width: '118ch',
+    // },
+    // Box:{
+    //     backgroundColor:"white",
+    //     opacity:"0.7",
+    //     boxShadow:"0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
+    //     borderRadius:"10px",
+    //     width:"120ch",
+    //     height:"30ch",
+    //     position:"relative",
+    //     left:"15%",
+    //     top:"150px",
+    // },
+    // arrangeBox:{
+    //     marginLeft:"10%",
+    // },
+    // heading:{
+    //     marginLeft:"500px",
+    //     color:"black",
+    // },
     form:{
         height:"1100px",
         position:"relative",
-        left:"560px",
+        left:"590px",
         top:"140px"
     }
 }));
