@@ -53,10 +53,10 @@ function Team() {
   return (
     <div className={classes.pad}>
       <Container>
-        <Grid container spacing={3}>
-          {project.map((member) => (
-            <Grid item xs={12} sm={6} md={6}>
-              <ProjectMemberCard member={member} />
+        <Grid container spacing={6}>
+          {project.map((member,ind) => (
+            <Grid item xs={12} sm={12} md={12}>
+              <ProjectMemberCard member={member} side={ind+1}/>
             </Grid>
           ))}
         </Grid>
