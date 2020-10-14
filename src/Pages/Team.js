@@ -1,6 +1,7 @@
 import React from "react";
 import TeamMemberCard from "../Components/TeamMemberCard";
 import { Grid, Container, Box } from "@material-ui/core";
+import { makeStyles } from '@material-ui/core/styles';
 
 const team = [
   {
@@ -71,22 +72,33 @@ const team = [
   },
 ];
 
+
+const useStyles = makeStyles((theme) => ({
+  align: {
+    position: "relative",
+    top: "140px"
+  }
+}));
+
+
 function Team() {
+  const classes = useStyles();
   return (
-    <Container maxWidth="md">
+    <div className={classes.align}>
       <Box p={2} component='h2'>
         Meet our Team!
       </Box>
-      <Grid  container spacing={3}>
-      {team.map((member) => (
-    
-          <Grid item xs={12} sm={6} md={4}>
-            <TeamMemberCard member={member} />
-          </Grid>
-      ))}
-        
-      </Grid>
-    </Container>
+      <Container>
+        <Grid container spacing={3}>
+          {team.map((member) => (
+            <Grid item xs={12} sm={6} md={4}>
+              <TeamMemberCard member={member} />
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
+    </div>
+
   );
 }
 
