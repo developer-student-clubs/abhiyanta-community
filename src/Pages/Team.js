@@ -1,105 +1,74 @@
 import React from "react";
 import TeamMemberCard from "../Components/TeamMemberCard";
-import { Grid, Container, Box } from "@material-ui/core";
+import { Grid, Container, Box, IconButton } from "@material-ui/core";
+import { Team } from "../Content/TeamContent";
 import { makeStyles } from '@material-ui/core/styles';
-
-const team = [
-  {
-    rank: 0,
-    rating: 2.5,
-    name: "Rishav",
-    description: "lorem ipsum dolor",
-    detailedContent:  `lorem ipsum dolor \n
-                       lorem ipsum dolor \n
-                       lorem ipsum dolor`,
-    image:
-    process.env.PUBLIC_URL + "/Assets/temp-img.jpg",
-  },
-  {
-    rank: 1,
-    rating: 4,
-    name: "Parth",
-    description: "lorem ipsum dolor",
-    detailedContent: `lorem ipsum dolor
-                        lorem ipsum dolor
-                        lorem ipsum dolor`,
-    image:
-    process.env.PUBLIC_URL + "/Assets/temp-img.jpg",
-  },
-  {
-    rank: 0,
-    rating: 2.5,
-    name: "Saul",
-    description: "lorem ipsum dolor",
-    detailedContent: `lorem ipsum dolor
-                        lorem ipsum dolor
-                        lorem ipsum dolor`,
-    image:
-    process.env.PUBLIC_URL + "/Assets/temp-img.jpg",
-  },
-  {
-    rank: 1,
-    rating: 4,
-    name: "Chuck",
-    description: "lorem ipsum dolor",
-    detailedContent: `lorem ipsum dolor
-                        lorem ipsum dolor
-                        lorem ipsum dolor`,
-    image:
-    process.env.PUBLIC_URL + "/Assets/temp-img.jpg",
-  },
-  {
-    rank: 1,
-    rating: 4,
-    name: "James",
-    description: "lorem ipsum dolor",
-    detailedContent: `lorem ipsum dolor
-                        lorem ipsum dolor
-                        lorem ipsum dolor`,
-    image:
-    process.env.PUBLIC_URL + "/Assets/temp-img.jpg",
-  },
-  {
-    rank: 1,
-    rating: 4,
-    name: "Alyssa",
-    description: "lorem ipsum dolor",
-    detailedContent: `lorem ipsum dolor
-                        lorem ipsum dolor
-                        lorem ipsum dolor`,
-    image:
-    process.env.PUBLIC_URL + "/Assets/temp-img.jpg",
-  },
-];
-
+import Collapse from '@material-ui/core/Collapse';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import clsx from 'clsx';
 
 const useStyles = makeStyles((theme) => ({
   align: {
     position: "relative",
-    top: "140px"
+  },
+  expand: {
+    transform: 'rotate(0deg)',
+    marginLeft: 'auto',
+    transition: theme.transitions.create('transform', {
+      duration: theme.transitions.duration.shortest,
+    }),
+  },
+  expandOpen: {
+    transform: 'rotate(180deg)',
+  },
+  icon: {
+    color: "white",
   }
 }));
-
-
-function Team() {
+function DisplayTeam() {
   const classes = useStyles();
+  const [expanded, setExpanded] = React.useState(false);
+  const handleExpandClick = () => {
+    setExpanded(!expanded);
+  };
   return (
     <div className={classes.align}>
-      <Box p={2} component='h2'>
-        Meet our Team!
-      </Box>
-      <Container>
-        <Grid container spacing={3}>
-          {team.map((member) => (
-            <Grid item xs={12} sm={6} md={4}>
-              <TeamMemberCard member={member} />
+      <Container maxWidth="md">
+        <Box p={2} component='h2'>
+          Meet our Team!
+        </Box>
+
+        {Team.map((data,key) => (
+          <div key={key}>
+          <Box p={2} component='h5'>
+            {data.TeamName}
+          <IconButton
+              className={clsx(classes.expand, classes.icon, {
+                [classes.expandOpen]: expanded,
+              })}
+              onClick={handleExpandClick}
+              aria-expanded={expanded}
+              aria-label="show more"
+            >
+              <ExpandMoreIcon />
+            </IconButton>
+          </Box>
+          <Collapse in={expanded} timeout="auto" unmountOnExit>
+            <Grid container spacing={3}>
+              {data.TeamMembers.map((member) => (
+                <Grid item xs={12} sm={6} md={4}>
+                  <TeamMemberCard member={member} />
+                </Grid>
+              ))}
             </Grid>
-          ))}
-        </Grid>
+          </Collapse>
+          </div>
+        ))}
+        
       </Container>
     </div>
 
   );
 }
 
-export default Team;
+export default DisplayTeam;

@@ -1,24 +1,23 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
-import Button from "@material-ui/core/Button";
+import { makeStyles, ThemeProvider } from "@material-ui/core/styles";
+import { Card,CardActions,CardContent,CardMedia } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
+import { Rating } from '@material-ui/lab';
+import { IconButton } from '@material-ui/core';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import MailIcon from '@material-ui/icons/Mail';
 
-import clsx from 'clsx';
-import Collapse from '@material-ui/core/Collapse';
-import IconButton from '@material-ui/core/IconButton';
-import ShareIcon from '@material-ui/icons/Share';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { createMuiTheme } from '@material-ui/core/styles';
 
-const useStyles = makeStyles((theme)=>({
+let fonttheme = createMuiTheme();
+fonttheme.typography.body1 = {
+  fontSize: '0.85rem',
+}
+const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
     display: 'inline-block',
-    transitionDuration: '0.3s',
   },
   content: {
     background: "#1B9CE5",  //#1b9ce5 27,156,229rgb  202,80,50,1 hsla
@@ -28,85 +27,51 @@ const useStyles = makeStyles((theme)=>({
     background: "#0074E1",  //209 100 44 1 hsla
     color: "hsla(0,0,0,0.9)",
   },
-  icons: {
-    background: "#dddddd",  //209 100 44 1 hsla
-    //color: "white",
-  },
-  expand: {
-    transform: 'rotate(0deg)',
-    marginLeft: 'auto',
-    transition: theme.transitions.create('transform', {
-      duration: theme.transitions.duration.shortest,
-    }),
-  },
-  expandOpen: {
-    transform: 'rotate(180deg)',
+  text:
+  {
+    color: "#eeeeee",
   },
 }));
 
 function ImgMediaCard(props) {
   const classes = useStyles();
-  const [expanded, setExpanded] = React.useState(false);
-
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
-
   return (
     <div>
       <Card className={classes.root}>
-        <CardActionArea>
           <CardMedia
             component="img"
-            alt={props.member.name}
+            alt={props.member.Name}
             height="140"
-            image={props.member.image}
-            title={props.member.name}
+            image={props.member.Photo}
+            title={props.member.Name}
           />
           <CardContent className={classes.content}>
             <Typography gutterBottom variant="h5" component="h2">
-              {props.member.name}
+              {props.member.Name}
             </Typography>
-            <Typography gutterBottom component="p">
-              {props.member.description}
-            </Typography>
+            <ThemeProvider theme={fonttheme}>
+              <Typography variant="body1" component="div" >
+                <div className={classes.text}>{props.member.Designation}</div>
+                <MailIcon style={{fontSize:16}}/>&nbsp;<span style={{fontSize:16}}>{props.member.Email}</span>
+              </Typography>
+            </ThemeProvider>
+
           </CardContent>
-        </CardActionArea>
-        {/*<CardActions className={classes.action}>
-          <Button size="small" className={classes.action}>
-            Share
-          </Button>
-          <Button size="small" className={classes.action}>
-            More Details
-          </Button>
-          
-          {/*<Rating
-            value={props.member.rating}
+        <CardActions className={classes.action} disableSpacing>
+          <IconButton href={props.member.LinkedIn}>
+            <LinkedInIcon fontSize="medium"/>
+          </IconButton>
+          <IconButton href={props.member.Github}>
+            <GitHubIcon fontSize="small"/>
+          </IconButton>
+          <Rating
+            value={props.member.Stars}
             size={"small"}
+            style={{color:"white", marginLeft: 'auto', padding:10}}
             precision={0.5}
             readOnly
-          />}
-        </CardActions>*/}
-        <CardActions  className={classes.action} disableSpacing>
-          <IconButton aria-label="share">
-            <ShareIcon />
-          </IconButton>
-          <IconButton 
-            className={clsx(classes.expand, classes.icons, {
-              [classes.expandOpen]: expanded,
-            })}
-            onClick={handleExpandClick}
-            aria-expanded={expanded}
-            aria-label="show more"
-          >
-            <ExpandMoreIcon />
-          </IconButton>
+          />
         </CardActions>
-        <Collapse className={classes.action} in={expanded} timeout="auto" unmountOnExit>
-        <CardContent >
-          {props.member.detailedContent}
-        </CardContent>
-      </Collapse>
       </Card>
     </div>
   );
