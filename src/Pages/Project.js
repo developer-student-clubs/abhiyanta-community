@@ -55,7 +55,7 @@ function Team() {
       <Container>
         <Grid container spacing={3}>
           {project.map((member) => (
-            <Grid item xs={12} sm={6} md={4}>
+            <Grid item xs={12} sm={6} md={6}>
               <ProjectMemberCard member={member} />
             </Grid>
           ))}

@@ -11,7 +11,7 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345,
+    maxWidth: "590px",
   },
   align: {
     position: "relative",
@@ -30,7 +30,7 @@ function ImgMediaCard(props) {
         <CardMedia
           component="img"
           alt="Project Image"
-          height="140"
+          height="100px"
           image={props.member.image}
           title="Contemplative Reptile"
         />
