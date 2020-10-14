@@ -2,7 +2,7 @@ import React from "react";
 
 import ProjectMemberCard from "../Components/ProjectMemberCard";
 import { Grid, Container } from "@material-ui/core";
-
+import { makeStyles } from '@material-ui/core/styles';
 const Items = [
   {
     rank: 0,
@@ -34,17 +34,29 @@ const Items = [
   },
 ];
 
+const useStyles = makeStyles((theme) => ({
+  align: {
+    position: "relative",
+    top: "140px"
+  }
+}));
+
+
 function Project() {
+  const classes = useStyles();
   return (
-    <Container>
-      <Grid container spacing={3}>
-        {Items.map((member) => (
-          <Grid item xs={12} sm={6} md={4}>
-            <ProjectMemberCard member={member} />
-          </Grid>
-        ))}
-      </Grid>
-    </Container>
+    <div className={classes.align}>
+      <Container>
+        <Grid container spacing={3}>
+          {Items.map((member) => (
+            <Grid item xs={12} sm={6} md={4}>
+              <ProjectMemberCard member={member} />
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
+    </div>
+
   );
 }
 
