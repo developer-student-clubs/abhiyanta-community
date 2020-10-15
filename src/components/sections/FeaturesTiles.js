@@ -89,15 +89,23 @@ const FeaturesTiles = ({
 
   const subSectionHeader = {
     paragraph:
-      "To empower innovators to implement their best ideas and get it in front of the audience they deserve",
+      '"To empower innovators to implement their best ideas and get it in front of the audience they deserve"',
   };
 
   return (
     <section {...props} className={outerClasses}>
       <div className="container">
         <div className={innerClasses}>
-          <SectionHeader data={sectionHeader} className="center-content" />
-          <SectionHeader data={subSectionHeader} className="center-content" />
+          <SectionHeader
+            data={sectionHeader}
+            className="center-content hero-inner section-inner"
+          />
+          <i>
+            <SectionHeader
+              data={subSectionHeader}
+              className="center-content italic"
+            />
+          </i>
           <div className={tilesClasses}>
             {Items.map((item) => (
               <div

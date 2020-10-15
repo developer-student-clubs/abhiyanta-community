@@ -1,8 +1,8 @@
 import React from "react";
 // import sections
-import Hero from "../Components/sections/Hero";
-import FeaturesTiles from "../Components/sections/FeaturesTiles";
-import FeaturesSplit from "../Components/sections/FeaturesSplit";
+import Hero from "../components/sections/Hero";
+import FeaturesTiles from "../components/sections/FeaturesTiles";
+import FeaturesSplit from "../components/sections/FeaturesSplit";
 
 const Home = () => {
   return (
