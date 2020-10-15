@@ -61,8 +61,6 @@ function ImgMediaCard(props) {
   const classes = useStyles();
   //align image alternatively
   const dirr = props.side % 2 === 0 ? classes.root1 : classes.root;
-  const heading1 = <h1>Ongoing Project</h1>;
-  const heading2 = <h1>completed Project</h1>;
   const finalHead = props.member.status !== "" ? props.member.status === "going" ? <h1 className={classes.head}>Ongoing Project</h1> : <h1 className={classes.head}>Completed Project</h1> : " ";
   return (
     <div className={classes.align}>
