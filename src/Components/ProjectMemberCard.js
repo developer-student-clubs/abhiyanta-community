@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'row-reverse',
     height: "400px"
   },
-  root:{
+  root: {
     display: 'flex',
     height: "400px"
   },
@@ -41,37 +41,44 @@ const useStyles = makeStyles((theme) => ({
   align: {
     position: "relative",
     top: "50px",
-    left: "100px"
+    left: "30px"
+  },
+  title: {
+    color: "black",
+    fontSize: "2em",
+    fontStyle: "bold"
+  },
+  desc: {
+    fontSize: "1em"
+  },
+  head:{
+    fontSize:"4.5em",
+    fontFamily:"Comfortaa"
   }
 }));
 
 function ImgMediaCard(props) {
   const classes = useStyles();
   //align image alternatively
-  const dirr = props.side %2===0 ? classes.root1 : classes.root;
-
+  const dirr = props.side % 2 === 0 ? classes.root1 : classes.root;
+  const heading1 = <h1>Ongoing Project</h1>;
+  const heading2 = <h1>completed Project</h1>;
+  const finalHead = props.member.status !== "" ? props.member.status === "going" ? <h1 className={classes.head}>Ongoing Project</h1> : <h1 className={classes.head}>Completed Project</h1> : " ";
   return (
     <div className={classes.align}>
+      {finalHead}
       <Card className={dirr}>
         <div className={classes.details}>
           <CardActionArea>
             <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
-                {props.member.title}
+              <Typography className={classes.title} gutterBottom variant="h5" component="h2">
+                <strong><em>{props.member.title}</em></strong>
               </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
+              <Typography className={classes.desc} variant="body2" color="textSecondary" component="p">
                 {props.member.content}
               </Typography>
             </CardContent>
           </CardActionArea>
-          <CardActions>
-            <Button size="small" color="primary">
-              Share
-        </Button>
-            <Button size="small" color="primary">
-              Learn More
-        </Button>
-          </CardActions>
         </div>
         <CardMedia
           component="img"
