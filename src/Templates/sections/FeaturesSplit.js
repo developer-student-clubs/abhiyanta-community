@@ -49,9 +49,7 @@ const FeaturesSplit = ({
   );
 
   const sectionHeader = {
-    title: "Workflow that just works",
-    paragraph:
-      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.",
+    title: "Founders",
   };
 
   return (
@@ -62,45 +60,48 @@ const FeaturesSplit = ({
           <div className={splitClasses}>
             <div className="split-item">
               <div
-                className="split-item-content center-content-mobile reveal-from-left"
+                className="split-item-content center-content-mobile reveal-from-right"
                 data-reveal-container=".split-item"
               >
-                <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
+                {/* <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
                   Lightning fast workflow
-                </div>
-                <h3 className="mt-0 mb-12">Data-driven insights</h3>
+                </div> */}
+                <h3 className="mt-0 mb-12 text-color-primary">Ritvik Tiwari</h3>
                 <p className="m-0">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua
-                  — Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
+                  Hey, I’m Ritvik! I have always been a VLSI enthusiast and I am
+                  keen to gain as much knowledge as possible in this domain.
+                  FPGA is something which intrigued me a lot, the moment I read
+                  about it. Since my childhood days I was interested in learning
+                  robotics and the amount of innovations that we have seen in
+                  this field are mind blowing. I hope this site gives you some
+                  inspiration to innovate something new!
                 </p>
               </div>
               <div
                 className={classNames(
-                  "split-item-image center-content-mobile reveal-from-bottom",
-                  imageFill && "split-item-image-fill"
+                  "split-item-image center-content-mobile reveal-from-bottom" &&
+                    "split-item-image-fill"
                 )}
                 data-reveal-container=".split-item"
               >
                 <Image
-                  src={require("./../../assets/images/features-split-image-01.png")}
-                  alt="Features split 01"
+                  src={process.env.PUBLIC_URL + "/Assets/ritvik_round.png"}
+                  alt="Features split 02"
                   width={528}
                   height={396}
+                  style={{ marginBottom: -120, marginTop: -120 }}
                 />
               </div>
             </div>
-
             <div className="split-item">
               <div
                 className="split-item-content center-content-mobile reveal-from-right"
                 data-reveal-container=".split-item"
               >
-                <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
+                {/* <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
                   Lightning fast workflow
-                </div>
-                <h3 className="mt-0 mb-12">Data-driven insights</h3>
+                </div> */}
+                <h3 className="mt-0 mb-12 text-color-primary">Prit Varmora</h3>
                 <p className="m-0">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua
@@ -116,10 +117,11 @@ const FeaturesSplit = ({
                 data-reveal-container=".split-item"
               >
                 <Image
-                  src={require("./../../assets/images/features-split-image-02.png")}
+                  src={process.env.PUBLIC_URL + "/Assets/prit_round.png"}
                   alt="Features split 02"
                   width={528}
                   height={396}
+                  style={{ marginBottom: -120, marginTop: -120 }}
                 />
               </div>
             </div>
