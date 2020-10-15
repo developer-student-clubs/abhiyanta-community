@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
 
 function SubTeamDiv(props) {
     const classes = useStyles();
-    const [expanded, setExpanded] = React.useState(false);
+    const [expanded, setExpanded] = React.useState(true);
     const handleExpandClick = () => {
         setExpanded(!expanded);
     };
