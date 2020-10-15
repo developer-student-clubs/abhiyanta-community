@@ -17,7 +17,6 @@ import Notfound from "./Pages/NotFound";
 import Team from "./Pages/Team";
 import Project from "./Pages/Project";
 import Contact from "./Pages/Contact";
-
 // Initialize Google Analytics
 ReactGA.initialize(process.env.REACT_APP_GA_CODE);
 

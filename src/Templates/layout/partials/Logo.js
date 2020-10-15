@@ -13,8 +13,8 @@ const Logo = ({ className, ...props }) => {
           <Image
             src={process.env.PUBLIC_URL + "/Assets/abhiyanta_logo_round.png"}
             alt="Open"
-            width={32}
-            height={32}
+            width={55}
+            height={55}
           />
         </Link>
       </h1>
