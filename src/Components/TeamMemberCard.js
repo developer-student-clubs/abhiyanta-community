@@ -7,7 +7,6 @@ import { IconButton } from '@material-ui/core';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import MailIcon from '@material-ui/icons/Mail';
-
 import { createMuiTheme } from '@material-ui/core/styles';
 
 let fonttheme = createMuiTheme();
@@ -20,11 +19,12 @@ const useStyles = makeStyles((theme) => ({
     display: 'inline-block',
   },
   content: {
-    background: "#1B9CE5",  //#1b9ce5 27,156,229rgb  202,80,50,1 hsla
-    color: "white"
+    background: "#6163FF",
+    color: "white",
+    height: "auto",
   },
   action: {
-    background: "#0074E1",  //209 100 44 1 hsla
+    background: "#5153EF",
     color: "hsla(0,0,0,0.9)",
   },
   text:
@@ -37,7 +37,7 @@ function ImgMediaCard(props) {
   const classes = useStyles();
   return (
     <div>
-      <Card className={classes.root}>
+      <Card boxShadow={4} className={classes.root}>
           <CardMedia
             component="img"
             alt={props.member.Name}
@@ -52,7 +52,7 @@ function ImgMediaCard(props) {
             <ThemeProvider theme={fonttheme}>
               <Typography variant="body1" component="div" >
                 <div className={classes.text}>{props.member.Designation}</div>
-                <MailIcon style={{fontSize:16}}/>&nbsp;<span style={{fontSize:16}}>{props.member.Email}</span>
+                <MailIcon style={{fontSize:14}}/>&nbsp;<span style={{fontSize:14}}>{props.member.Email}</span>
               </Typography>
             </ThemeProvider>
 
