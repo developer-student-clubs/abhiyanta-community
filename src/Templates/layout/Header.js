@@ -112,6 +112,11 @@ const Header = ({
                     )}
                   >
                     <li>
+                      <Link to="/" onClick={closeMenu}>
+                        Home
+                      </Link>
+                    </li>
+                    <li>
                       <Link to="/team" onClick={closeMenu}>
                         Team
                       </Link>
@@ -126,11 +131,6 @@ const Header = ({
                     <li>
                       <Link to="/contact" onClick={closeMenu}>
                         Contact Us
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/about" onClick={closeMenu}>
-                        About
                       </Link>
                     </li>
                     <li>
