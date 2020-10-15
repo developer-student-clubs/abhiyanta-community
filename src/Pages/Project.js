@@ -5,40 +5,39 @@ import { Grid, Container } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
 const Items = [
   {
-    rank: 0,
-    rating: 2.5,
+  
+  
     name: "project1",
+    desc: "this is project1",
     image:
       "https://ssl.gstatic.com/analytics/20200901-00/app/static/mobile/ZeroStateIcons/zero-state-users.png",
   },
   {
-    rank: 1,
-    rating: 4,
-    name: "Project2",
+    name: "project2",
+    desc: "this is project2",
     image:
       "https://ssl.gstatic.com/analytics/20200901-00/app/static/mobile/ZeroStateIcons/zero-state-users.png",
   },
   {
-    rank: 0,
-    rating: 2.5,
+    
     name: "project3",
+    desc: " this is project3",
     image:
       "https://ssl.gstatic.com/analytics/20200901-00/app/static/mobile/ZeroStateIcons/zero-state-users.png",
   },
   {
-    rank: 1,
-    rating: 4,
+    
     name: "Project4",
+    desc:" this is project4",
     image:
       "https://ssl.gstatic.com/analytics/20200901-00/app/static/mobile/ZeroStateIcons/zero-state-users.png",
   },
 ];
 
 const useStyles = makeStyles((theme) => ({
-  align: {
-    position: "relative",
-    top: "140px"
-  }
+  mainGrid: {
+    marginTop: theme.spacing(3),
+  },
 }));
 
 

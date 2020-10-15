@@ -8,11 +8,17 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 
-import Rating from "@material-ui/lab/Rating";
+
 
 const useStyles = makeStyles({
-  root: {
-    maxWidth: 345,
+  card: {
+    display: 'flex',
+  },
+  cardDetails: {
+    flex: 1,
+  },
+  cardMedia: {
+    width: 160,
   },
 });
 
@@ -26,29 +32,23 @@ function ImgMediaCard(props) {
           <CardMedia
             component="img"
             alt={props.member.name}
-            height="140"
+            height="100"
             image={props.member.image}
             title={props.member.name}
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
               {props.member.name}
+              
+              {props.member.desc}
             </Typography>
           </CardContent>
         </CardActionArea>
         <CardActions>
-          <Button size="small" color="primary">
-            Share
-          </Button>
+  
           <Button href="#" size="small" color="primary">
-            More Details
+             view project
           </Button>
-          <Rating
-            value={props.member.rating}
-            size={"small"}
-            precision={0.5}
-            readOnly
-          />
         </CardActions>
       </Card>
     </div>
