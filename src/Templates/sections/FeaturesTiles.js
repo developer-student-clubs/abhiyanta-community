@@ -3,45 +3,7 @@ import classNames from "classnames";
 import { SectionTilesProps } from "../../utils/SectionProps";
 import SectionHeader from "./partials/SectionHeader";
 import Image from "../elements/Image";
-
-const Items = [
-  {
-    title: "Internet of Things",
-    description:
-      "Network of physical objects (things) that are embedded with sensors, software, and other technologies for the purpose of connecting and exchanging data over the Internet",
-    image: "./../../assets/images/feature-tile-icon-02.svg",
-  },
-  {
-    title: "Embedded System",
-    description:
-      "A combination of a processor, controller and I/O peripheral devices that has a dedicated function within a larger mechanical or electrical system",
-    image: "./../../assets/images/feature-tile-icon-02.svg",
-  },
-  {
-    title: "Digital Signal Processing",
-    description:
-      "Use of digital processing, such as by computers or more specialized digital signal processors, to perform a wide variety of processing operations on signals",
-    image: "./../../assets/images/feature-tile-icon-02.svg",
-  },
-  {
-    title: "Robotics",
-    description:
-      "Network of physical objects (things) that are embedded with sensors, software, and other technologies for the purpose of connecting and exchanging data over the Internet",
-    image: "./../../assets/images/feature-tile-icon-02.svg",
-  },
-  {
-    title: "Control System",
-    description:
-      "A control system manages, commands, directs, or regulates the behavior of other devices or systems using control loops",
-    image: "./../../assets/images/feature-tile-icon-02.svg",
-  },
-  {
-    title: "Image Processing",
-    description:
-      "Digital image processing is the use of a digital computer to process digital images through different algorithms",
-    image: "./../../assets/images/feature-tile-icon-02.svg",
-  },
-];
+import { Items } from "../../Content/HomeFeature";
 
 const propTypes = {
   ...SectionTilesProps.types,
@@ -116,8 +78,8 @@ const FeaturesTiles = ({
                   <div className="features-tiles-item-header">
                     <div className="features-tiles-item-image mb-16">
                       <Image
-                        src={require("./../../assets/images/feature-tile-icon-02.svg")}
-                        alt="Features tile icon 02"
+                        src={item.image}
+                        alt={item.title}
                         width={64}
                         height={64}
                       />
