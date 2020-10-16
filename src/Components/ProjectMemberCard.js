@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
   },
   head:{
     fontSize:"4.5em",
-    fontFamily:"Comfortaa"
+    // fontFamily:"Comfortaa"
   }
 }));
 
@@ -68,7 +68,7 @@ function ImgMediaCard(props) {
           <CardActionArea>
             <CardContent>
               <Typography className={classes.title} gutterBottom variant="h5" component="h2">
-                <strong><em>{props.member.title}</em></strong>
+                <strong>{props.member.title}</strong>
               </Typography>
               <Typography className={classes.desc} variant="body2" color="textSecondary" component="p">
                 {props.member.content}
