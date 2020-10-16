@@ -1,63 +1,30 @@
 import React from "react";
-
-import ProjectMemberCard from "../Components/ProjectMemberCard";
-import { Grid, Container } from "@material-ui/core";
+import { project } from "../Content/ProjectContent";
+import ProjectCategory from "../Components/ProjectCategory";
+import {Container} from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
-const Items = [
-  {
-    rank: 0,
-    rating: 2.5,
-    name: "project1",
-    image:
-      "https://ssl.gstatic.com/analytics/20200901-00/app/static/mobile/ZeroStateIcons/zero-state-users.png",
-  },
-  {
-    rank: 1,
-    rating: 4,
-    name: "Project2",
-    image:
-      "https://ssl.gstatic.com/analytics/20200901-00/app/static/mobile/ZeroStateIcons/zero-state-users.png",
-  },
-  {
-    rank: 0,
-    rating: 2.5,
-    name: "project3",
-    image:
-      "https://ssl.gstatic.com/analytics/20200901-00/app/static/mobile/ZeroStateIcons/zero-state-users.png",
-  },
-  {
-    rank: 1,
-    rating: 4,
-    name: "Project4",
-    image:
-      "https://ssl.gstatic.com/analytics/20200901-00/app/static/mobile/ZeroStateIcons/zero-state-users.png",
-  },
-];
 
 const useStyles = makeStyles((theme) => ({
   align: {
+    marginBottom: "30px",
     position: "relative",
-    top: "140px"
-  }
+    top: '30px',
+  },
 }));
 
 
-function Project() {
+function Team() {
   const classes = useStyles();
   return (
     <div className={classes.align}>
-      <Container>
-        <Grid container spacing={3}>
-          {Items.map((member) => (
-            <Grid item xs={12} sm={6} md={4}>
-              <ProjectMemberCard member={member} />
-            </Grid>
-          ))}
-        </Grid>
+      <Container style={{ maxWidth: 900 }}>
+        {project.map((category, index) => (
+          <ProjectCategory category={category} index={index} />
+        ))}
       </Container>
     </div>
 
   );
 }
 
-export default Project;
+export default Team;

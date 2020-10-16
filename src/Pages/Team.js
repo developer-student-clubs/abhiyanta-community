@@ -1,65 +1,28 @@
 import React from "react";
-
-import TeamMemberCard from "../Components/TeamMemberCard";
-import { Grid, Container } from "@material-ui/core";
+import SubTeam from "../Components/SubTeam";
+import { Container, Box } from "@material-ui/core";
+import { Team } from "../Content/TeamContent";
 import { makeStyles } from '@material-ui/core/styles';
-
-const team = [
-  {
-    rank: 0,
-    rating: 2.5,
-    name: "Rishav",
-    image:
-      "https://ssl.gstatic.com/analytics/20200901-00/app/static/mobile/ZeroStateIcons/zero-state-users.png",
-  },
-  {
-    rank: 1,
-    rating: 4,
-    name: "Parth",
-    image:
-      "https://ssl.gstatic.com/analytics/20200901-00/app/static/mobile/ZeroStateIcons/zero-state-users.png",
-  },
-  {
-    rank: 0,
-    rating: 2.5,
-    name: "Rishav",
-    image:
-      "https://ssl.gstatic.com/analytics/20200901-00/app/static/mobile/ZeroStateIcons/zero-state-users.png",
-  },
-  {
-    rank: 1,
-    rating: 4,
-    name: "Parth",
-    image:
-      "https://ssl.gstatic.com/analytics/20200901-00/app/static/mobile/ZeroStateIcons/zero-state-users.png",
-  },
-];
-
 
 const useStyles = makeStyles((theme) => ({
   align: {
     position: "relative",
-    top: "140px"
-  }
+    top: '30px',
+  },
 }));
-
-
-function Team() {
+function DisplayTeam() {
   const classes = useStyles();
   return (
     <div className={classes.align}>
-      <Container>
-        <Grid container spacing={3}>
-          {team.map((member) => (
-            <Grid item xs={12} sm={6} md={4}>
-              <TeamMemberCard member={member} />
-            </Grid>
-          ))}
-        </Grid>
+      <Container maxWidth="md">
+        <Box p={2} component='h2'>
+          Meet our Team!
+        </Box>
+        {Team.map((sub_team,index) => (
+          <SubTeam subTeam={sub_team} index={index}/>          
+        ))}        
       </Container>
     </div>
-
   );
 }
-
-export default Team;
+export default DisplayTeam;
