@@ -1,22 +1,24 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, ThemeProvider } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { createMuiTheme } from '@material-ui/core/styles';
 
+let fonttheme = createMuiTheme();
+fonttheme.typography.body2 = {
+  fontSize: '0.85rem',
+}
 const useStyles = makeStyles((theme) => ({
   root1: {
     display: 'flex',
     flexDirection: 'row-reverse',
-    height: "400px"
+    height: 350
   },
   root:{
     display: 'flex',
-    height: "400px"
+    height: 350,
   },
   details: {
     display: 'flex',
@@ -41,43 +43,41 @@ const useStyles = makeStyles((theme) => ({
   align: {
     position: "relative",
     top: "50px",
-    left: "100px"
-  }
+  },
+  content: {
+    background: "#8183FF",
+    color: "hsla(0,0,0,0.9)",
+    height: "100%",
+    overflow: "auto",
+  },
 }));
 
 function ImgMediaCard(props) {
   const classes = useStyles();
   //align image alternatively
+  
   const dirr = props.side %2===0 ? classes.root1 : classes.root;
 
   return (
     <div className={classes.align}>
       <Card className={dirr}>
         <div className={classes.details}>
-          <CardActionArea>
-            <CardContent>
+            <CardContent className = {classes.content}>
               <Typography gutterBottom variant="h5" component="h2">
                 {props.member.title}
               </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
+              <ThemeProvider theme={fonttheme}>
+              <Typography variant="body2" component="p">
                 {props.member.content}
               </Typography>
+              </ThemeProvider>
             </CardContent>
-          </CardActionArea>
-          <CardActions>
-            <Button size="small" color="primary">
-              Share
-        </Button>
-            <Button size="small" color="primary">
-              Learn More
-        </Button>
-          </CardActions>
         </div>
         <CardMedia
           component="img"
+          image={props.member.image}          
           alt="project image"
-          height="140"
-          image={props.member.image}
+          style = {{width : 350}}
           title="project image"
         />
       </Card>

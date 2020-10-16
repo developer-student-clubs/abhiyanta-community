@@ -8,7 +8,7 @@ export const Team = [
                 Email: "pritjvarmora14044@gmail.com",
                 LinkedIn: "https://www.linkedin.com/in/prit-varmora",
                 Github: "https://www.github.com/PRITVARMORA",
-                Photo: process.env.PUBLIC_URL + "/Assets/temp-img.jpg",
+                Photo: process.env.PUBLIC_URL + "/Assets/TeamPhotos/CoreTeam/Prit Varmora.jpg",
             },
             {
                 Name: "Ritvik Tiwari",
@@ -16,7 +16,7 @@ export const Team = [
                 Email: "ritviktiwari50@gmail.com",
                 LinkedIn: "https://www.linkedin.com/in/ritvik-tiwari",
                 Github: "https://www.github.com/ritvik-tiwari",
-                Photo: process.env.PUBLIC_URL + "/Assets/temp-img.jpg",
+                Photo: process.env.PUBLIC_URL + "/Assets/TeamPhotos/CoreTeam/Ritvik Tiwari.jpg",
             },
             {
                 Name: "Minu Chaudhary",
@@ -24,7 +24,7 @@ export const Team = [
                 Email: "minuchaudhary06@gmail.com",
                 LinkedIn: "https://www.linkedin.com/in/minu-chaudhary",
                 Github: "https://www.github.com/Minu-Chaudhary",
-                Photo: process.env.PUBLIC_URL + "/Assets/temp-img.jpg",
+                Photo: process.env.PUBLIC_URL + "/Assets/TeamPhotos/CoreTeam/Minu Chaudhary.jpg",
             },
             {
                 Name: "Soham Vekariya",
@@ -32,7 +32,7 @@ export const Team = [
                 Email: "sohamvekariya111@gmail.com",
                 LinkedIn: "https://www.linkedin.com/in/soham-vekariya-6474491b5",
                 Github: "https://www.github.com/SohamVekariya",
-                Photo: process.env.PUBLIC_URL + "/Assets/temp-img.jpg",
+                Photo: process.env.PUBLIC_URL + "/Assets/TeamPhotos/CoreTeam/SohamVekariya.jpg",
             },
         ]
     },
@@ -45,7 +45,7 @@ export const Team = [
                 LinkedIn: "https://www.linkedin.com/in/deep-kanani-87a513180",
                 Github: "https://www.github.com/Deepie127",
                 Stars: 0,
-                Photo: process.env.PUBLIC_URL + "/Assets/temp-img.jpg",
+                Photo: process.env.PUBLIC_URL + "/Assets/TeamPhotos/Members/Deep Kanani.jpeg",
             },
             {
                 Name: "Dhruv Kanyal",
@@ -53,7 +53,7 @@ export const Team = [
                 LinkedIn: "https://www.linkedin.com/in/dhruv-kanyal-956512180",
                 Github: "https://www.github.com/Dhruv118",
                 Stars: 0,
-                Photo: process.env.PUBLIC_URL + "/Assets/temp-img.jpg",
+                Photo: process.env.PUBLIC_URL + "/Assets/TeamPhotos/Members/Dhruv Kanyal.jpg",
             },
             {
                 Name: "Hardee Bhatt",
@@ -61,7 +61,7 @@ export const Team = [
                 LinkedIn: "https://www.linkedin.com/in/hardee-bhatt-6162681b4",
                 Github: "https://www.github.com/Hardee426",
                 Stars: 0,
-                Photo: process.env.PUBLIC_URL + "/Assets/temp-img.jpg",
+                Photo: process.env.PUBLIC_URL + "/Assets/TeamPhotos/Members/Hardee Bhatt.jpg",
             },
             {
                 Name: "Het Shah",
@@ -69,7 +69,7 @@ export const Team = [
                 LinkedIn: "https://www.linkedin.com/in/het-shah-07b5a41b3",
                 Github: "https://www.github.com/HetShah512",
                 Stars: 1,
-                Photo: process.env.PUBLIC_URL + "/Assets/temp-img.jpg",
+                Photo: process.env.PUBLIC_URL + "/Assets/TeamPhotos/Members/Het Shah.jpg",
             },
             {
                 Name: "Kashyap Joshi",
@@ -77,7 +77,7 @@ export const Team = [
                 LinkedIn: "https://www.linkedin.com/in/kashyap-joshi-415381191",
                 Github: "https://www.github.com/379-kash",
                 Stars: 1,
-                Photo: process.env.PUBLIC_URL + "/Assets/temp-img.jpg",
+                Photo: process.env.PUBLIC_URL + "/Assets/TeamPhotos/Members/Kashyap Joshi.jpg",
             },
             {
                 Name: "Kaushal Parmar",
@@ -85,7 +85,7 @@ export const Team = [
                 LinkedIn: "https://www.linkedin.com/in/kaushal-parmar-0b3517176",
                 Github: "https://www.github.com/Kaushal-IN",
                 Stars: 0,
-                Photo: process.env.PUBLIC_URL + "/Assets/temp-img.jpg",
+                Photo: process.env.PUBLIC_URL + "/Assets/TeamPhotos/Members/Kaushal Parmar.jpg",
             },
             {
                 Name: "Muskan Vora",
@@ -93,7 +93,7 @@ export const Team = [
                 LinkedIn: "https://www.linkedin.com/in/muskan-vora-7920661a7",
                 Github: "https://www.github.com/Muskaan-Vora",
                 Stars: 0,
-                Photo: process.env.PUBLIC_URL + "/Assets/temp-img.jpg",
+                Photo: process.env.PUBLIC_URL + "/Assets/TeamPhotos/Members/Muskan Vora.jpg",
             },
             {
                 Name: "Namra Shastri",
@@ -101,7 +101,7 @@ export const Team = [
                 LinkedIn: "https://www.linkedin.com/in/namra-shastri-14321b183",
                 Github: "https://www.github.com/Namra561",
                 Stars: 1,
-                Photo: process.env.PUBLIC_URL + "/Assets/temp-img.jpg",
+                Photo: process.env.PUBLIC_URL + "/Assets/TeamPhotos/Members/Namra Shastri.jpg",
             },
             {
                 Name: "Rishav Singh",
@@ -109,7 +109,7 @@ export const Team = [
                 LinkedIn: "https://www.linkedin.com/in/rishav-singh011",
                 Github: "https://www.github.com/rishav-singh-0",
                 Stars: 0,
-                Photo: process.env.PUBLIC_URL + "/Assets/temp-img.jpg",
+                Photo: process.env.PUBLIC_URL + "/Assets/TeamPhotos/Members/Rishav Singh.jpg",
             },
             {
                 Name: "Sandeep Suthar",
@@ -117,7 +117,7 @@ export const Team = [
                 LinkedIn: "https://www.linkedin.com/in/suthar-sandeep-b36a48147/",
                 Github: "https://www.github.com/SANDEEP5301",
                 Stars: 0,
-                Photo: process.env.PUBLIC_URL + "/Assets/temp-img.jpg",
+                Photo: process.env.PUBLIC_URL + "/Assets/TeamPhotos/Members/Sandeep Suthar.jpg",
             },
             {
                 Name: "Shiv Bhatt",
@@ -125,7 +125,7 @@ export const Team = [
                 LinkedIn: "https://www.linkedin.com/in/shivbhatt08",
                 Github: "https://www.github.com/shivbhatt8",
                 Stars: 0,
-                Photo: process.env.PUBLIC_URL + "/Assets/temp-img.jpg",
+                Photo: process.env.PUBLIC_URL + "/Assets/TeamPhotos/Members/Shiv Bhatt.jpg",
             },
             {
                 Name: "Shrey Awasthi",
@@ -133,7 +133,7 @@ export const Team = [
                 LinkedIn: "https://www.linkedin.com/in/shrey-awasthi-1345a41b4",
                 Github: "https://www.github.com/shrey1228",
                 Stars: 0,
-                Photo: process.env.PUBLIC_URL + "/Assets/temp-img.jpg",
+                Photo: process.env.PUBLIC_URL + "/Assets/TeamPhotos/Members/Shrey Awasthi.jpg",
             },
         ],
     },
@@ -146,7 +146,7 @@ export const Team = [
                 LinkedIn: "https://www.linkedin.com/in/kathan-shah-b4857a17b",
                 Github: "https://www.github.com/kathan-shah99",
                 Stars: 1,
-                Photo: process.env.PUBLIC_URL + "/Assets/temp-img.jpg",
+                Photo: process.env.PUBLIC_URL + "/Assets/TeamPhotos/PastMembers/Kathan Shah.jpg",
             },
             {
                 Name: "Kartavya Barodiya",
@@ -154,7 +154,7 @@ export const Team = [
                 LinkedIn: "https://www.linkedin.com/in/kartavya-barodiya-8aa55b183/",
                 Github: "https://www.github.com/YantraBoy",
                 Stars: 0,
-                Photo: process.env.PUBLIC_URL + "/Assets/temp-img.jpg",
+                Photo: process.env.PUBLIC_URL + "/Assets/TeamPhotos/PastMembers/Kartavya Barodia.jpeg",
             },
             {
                 Name: "Krutarth Trivedi",
@@ -162,7 +162,7 @@ export const Team = [
                 LinkedIn: "https://www.linkedin.com/in/krutarth-trivedi-029211183",
                 Github: "https://www.github.com/krutarth3ved",
                 Stars: 1,
-                Photo: process.env.PUBLIC_URL + "/Assets/temp-img.jpg",
+                Photo: process.env.PUBLIC_URL + "/Assets/TeamPhotos/PastMembers/Krutarth Trivedi.jpg",
             },
         ],
     }

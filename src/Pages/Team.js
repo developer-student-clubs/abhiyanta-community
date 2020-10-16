@@ -18,8 +18,8 @@ function DisplayTeam() {
         <Box p={2} component='h2'>
           Meet our Team!
         </Box>
-        {Team.map((sub_team) => (
-          <SubTeam subTeam={sub_team}/>          
+        {Team.map((sub_team,index) => (
+          <SubTeam subTeam={sub_team} index={index}/>          
         ))}        
       </Container>
     </div>

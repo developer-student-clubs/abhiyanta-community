@@ -1,5 +1,5 @@
 import React from "react";
-import TeamMemberCard from "../Components/TeamMemberCard";
+import ProjectMemberCard from "../Components/ProjectMemberCard";
 import { Grid, Box, IconButton } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
 import Collapse from '@material-ui/core/Collapse';
@@ -12,6 +12,15 @@ fonttheme.typography.body1 = {
     fontSize: '0.85rem',
 }
 const useStyles = makeStyles((theme) => ({
+    align: {
+        marginBottom: "30px",
+        position: "relative",
+        top: '30px',
+    },
+    margin: {
+        marginBottom: 15,
+        marginTop: 15,
+    },
     expand: {
         transform: 'rotate(0deg)',
         marginLeft: 'auto',
@@ -26,18 +35,16 @@ const useStyles = makeStyles((theme) => ({
         color: "white",
     },
 }));
-
-function SubTeamDiv(props) {
+function ProjCategory(props) {
     const classes = useStyles();
     const [expanded, setExpanded] = React.useState(true);
     const handleExpandClick = () => {
         setExpanded(!expanded);
     };
-
     return (
         <div>
-            <Box p={2} component='h5'>
-                {props.subTeam.TeamName}
+        <Box component='h3' className={classes.align}>
+                {props.category.Category}
                 <IconButton
                     className={clsx(classes.expand, classes.icon, {
                         [classes.expandOpen]: expanded,
@@ -47,19 +54,18 @@ function SubTeamDiv(props) {
                     aria-label="show more"
                 >
                     <ExpandMoreIcon />
-                </IconButton>
-            </Box>
-            <Collapse in={expanded} timeout="auto" unmountOnExit>
-                <Grid container spacing={3}>
-                    {props.subTeam.TeamMembers.map((member) => (
-                        <Grid item xs={12} sm={6} md={4}>
-                            <TeamMemberCard member={member} index={props.index}/>
-                        </Grid>
-                    ))}
-                </Grid>
-            </Collapse>
+                  </IconButton>
+        </Box>
+        <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <Grid container spacing={3} className={classes.margin}>
+          {props.category.Projects.map((member,ind) => (
+            <Grid item xs={12} sm={12} md={12}>
+              <ProjectMemberCard member={member} side={ind+1+props.index}/>
+            </Grid>
+          ))}
+        </Grid>
+        </Collapse>
         </div>
     );
 }
-
-export default SubTeamDiv;
+export default ProjCategory;
