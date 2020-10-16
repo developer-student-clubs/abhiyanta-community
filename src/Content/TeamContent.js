@@ -32,7 +32,7 @@ export const Team = [
                 Email: "sohamvekariya111@gmail.com",
                 LinkedIn: "https://www.linkedin.com/in/soham-vekariya-6474491b5",
                 Github: "https://www.github.com/SohamVekariya",
-                Photo: process.env.PUBLIC_URL + "/Assets/TeamPhotos/CoreTeam/SohamVekariya.jpg",
+                Photo: process.env.PUBLIC_URL + "/Assets/TeamPhotos/CoreTeam/SohamVekariya.png",
             },
         ]
     },
