@@ -87,7 +87,7 @@ const Header = ({
             bottomDivider && "has-bottom-divider"
           )}
         >
-          <Logo />
+          <Logo image={"abhiyanta_logo_round1.png"} />
           {!hideNav && (
             <>
               <button
