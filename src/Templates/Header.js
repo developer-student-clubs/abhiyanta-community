@@ -28,7 +28,7 @@ function Header() {
     Home: "/",
     About: "/about",
     Team: "/team",
-    FAQ: "/faq",
+  
   };
 
   return (

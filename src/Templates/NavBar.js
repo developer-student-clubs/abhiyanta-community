@@ -4,7 +4,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import Header from "/Header";
 import Home from "../Pages/Home";
 import Contact from "../Pages/Contact";
-import Faq from "../Pages/Faq";
+//import Faq from "../Pages/Faq";
 import Notfound from "../Pages/NotFound";
 import Team from "../Pages/Team";
 import Project from "../Pages/Project";
@@ -18,7 +18,7 @@ function NavBar() {
         <Route exact path="/team" component={Team} />        
         <Route exact path="/project" component={Project} />
         <Route exact path="/contact" component={Contact} />               
-        <Route exact path="/faq" component={Faq} />
+     { /*  <Route exact path="/faq" component={Faq} />  */}
         <Route path="/NotFound" component={Notfound} />
         <Redirect to="/NotFound" />
       </Switch>
