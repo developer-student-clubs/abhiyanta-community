@@ -29,7 +29,7 @@ export const project = [
             },
             {
                 title: "Line follower Robot using V-rep",
-                image: process.env.PUBLIC_URL + "/Assets/Projects/Completed/Line following Robot.png",
+                image: process.env.PUBLIC_URL + "/Assets/Projects/Completed/Line Following Robot.png",
                 content: "For automation of mobile robots in fixed environments use of Line Following Robots is quite common. To practice the algorithms involved with controlling the line following robot, the model of the robot is implemented in Coppeliasim V-Rep Simulator. The key features of the robot include 90 degree turns and traversal through paths of different color. "
             },
         
