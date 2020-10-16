@@ -103,10 +103,17 @@ const FeaturesSplit = ({
                 </div> */}
                 <h3 className="mt-0 mb-12 text-color-primary">Prit Varmora</h3>
                 <p className="m-0">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua
-                  — Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
+                  I am Prit Varmora, the founder of Abhiyanta Community. I am an
+                  Engineer in the field of Electronics and communication and
+                  also a robotics enthusiast. Our Team secured the 2nd rank in
+                  the Nation-wide E-yantra Robotics Competition for which I have
+                  tried for 3 years continuously. I have done my summer
+                  internship at IIT Bombay. At every stage of my life as a
+                  student, I have observed that the education system has not put
+                  in any effort to change the conventional system. The key
+                  motivation behind establishing this community is to give wings
+                  to the student’s innovative ideas and make them implemented by
+                  the approach of learning together.
                 </p>
               </div>
               <div
