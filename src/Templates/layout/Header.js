@@ -124,7 +124,7 @@ const Header = ({
 
                     <li>
                       <Link to="/project" onClick={closeMenu}>
-                        Project
+                        Projects
                       </Link>
                     </li>
 

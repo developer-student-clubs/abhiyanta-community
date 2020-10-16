@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
     position: "relative",
     top: "50px",
   },
-  content: {
+  contentTheme: {
     background: "#8183FF",
     color: "hsla(0,0,0,0.9)",
     height: "100%",
@@ -62,7 +62,7 @@ function ImgMediaCard(props) {
     <div className={classes.align}>
       <Card className={dirr}>
         <div className={classes.details}>
-            <CardContent className = {classes.content}>
+            <CardContent className = {classes.contentTheme}>
               <Typography gutterBottom variant="h5" component="h2">
                 {props.member.title}
               </Typography>

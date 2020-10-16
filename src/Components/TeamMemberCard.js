@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
 
 function ImgMediaCard(props) {
   const classes = useStyles();
-  const displayStars = props.index == 0 ? false : true;
+  const displayStars = props.index === 0 ? false : true;
   return (
     <div>
       <Card className={classes.root}>
