@@ -87,7 +87,7 @@ const Header = ({
             bottomDivider && "has-bottom-divider"
           )}
         >
-          <Logo />
+          <Logo image={"abhiyanta_logo_round1.png"} />
           {!hideNav && (
             <>
               <button
@@ -124,18 +124,13 @@ const Header = ({
 
                     <li>
                       <Link to="/project" onClick={closeMenu}>
-                        Project
+                        Projects
                       </Link>
                     </li>
 
                     <li>
                       <Link to="/contact" onClick={closeMenu}>
                         Contact Us
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/faq" onClick={closeMenu}>
-                        FAQ
                       </Link>
                     </li>
                   </ul>
