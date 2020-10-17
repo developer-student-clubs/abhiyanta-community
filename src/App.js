@@ -1,72 +1,100 @@
-import React, { useRef, useEffect } from "react";
-import { useLocation, Switch, Redirect } from "react-router-dom";
-import AppRoute from "./utils/AppRoute";
-import ScrollReveal from "./utils/ScrollReveal";
+import React, { useRef, useEffect, useState } from "react";
+import { makeStyles } from "@material-ui/core/styles";
+
 import ReactGA from "react-ga";
 
+import Typography from "@material-ui/core/Typography";
+import { Grid } from "@material-ui/core";
 
-// Layouts
-import LayoutDefault from "./layouts/LayoutDefault";
-
-// Views
-import Home from "./views/Home";
-// Pages
-import About from "./Pages/About";
-import Faq from "./Pages/Faq";
-import Notfound from "./Pages/NotFound";
-import Team from "./Pages/Team";
-import Project from "./Pages/Project";
-import Contact from "./Pages/Contact";
-// Initialize Google Analytics
 ReactGA.initialize(process.env.REACT_APP_GA_CODE);
 
-const trackPage = (page) => {
-  ReactGA.set({ page });
-  ReactGA.pageview(page);
-};
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  title: {
+    flexGrow: 1,
+  },
+  paper: {
+    padding: theme.spacing(2),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+  },
+}));
 
 const App = () => {
-  const childRef = useRef();
-  let location = useLocation();
+  const classes = useStyles();
+  const calculateTimeLeft = () => {
+    let year = new Date().getFullYear();
+    const difference = +new Date('2020-10-17T17:35:00') - +new Date();
+    let timeLeft = {};
+
+    if (difference > 0) {
+      timeLeft = {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
+      };
+    }
+
+    return timeLeft;
+  };
+
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  const [year] = useState(new Date().getFullYear());
 
   useEffect(() => {
-    const page = location.pathname;
-    document.body.classList.add("is-loaded");
-    childRef.current.init();
-    trackPage(page);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [location]);
+    setTimeout(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+  });
 
+  const timerComponents = [];
+
+  Object.keys(timeLeft).forEach((interval) => {
+    if (!timeLeft[interval]) {
+      return;
+    }
+
+    timerComponents.push(
+      <span>
+        {timeLeft[interval]} {interval}{" "}
+      </span>
+    );
+  });
   return (
-    <ScrollReveal
-      ref={childRef}
-      children={() => (
-        <Switch>
-          <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
-          <AppRoute
-            exact
-            path="/about"
-            component={About}
-            layout={LayoutDefault}
-          />
-          <AppRoute exact path="/contact" component={Contact} layout={LayoutDefault} />
-          <AppRoute exact path="/faq" component={Faq} layout={LayoutDefault} />
-          <AppRoute exact path="/project" component={Project} layout={LayoutDefault} />
-          <AppRoute
-            exact
-            path="/team"
-            component={Team}
-            layout={LayoutDefault}
-          />
-          <AppRoute
-            path="/NotFound"
-            component={Notfound}
-            layout={LayoutDefault}
-          />
-          <Redirect to="/NotFound" />
-        </Switch>
-      )}
-    />
+    <div className={classes.root}>
+
+      <Grid container
+        spacing={0}
+        direction="column"
+        alignItems="center"
+        justify="center"
+        style={{ minHeight: '100vh' }}>
+
+        <Grid item xs={6}>
+          <Typography variant="h2" className={classes.title}>
+            Abhiyanta Community
+          </Typography>
+          
+          <Grid container
+          style={{paddingTop: "2rem"}}
+          spacing={0}
+          direction="column"
+          alignItems="center"
+          justify="center">
+          { timerComponents.length ? 
+            <Typography> Website will launch in {timerComponents} </Typography> : 
+            <Typography variant="h5" className={classes.title}>
+              Website is Live!
+            </Typography>}
+          </Grid>
+
+
+        </Grid>
+      </Grid>
+    </div>
   );
 };
 
