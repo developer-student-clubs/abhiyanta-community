@@ -6,6 +6,13 @@ on:
 name: Build and Upload Artifact
 
 jobs:
+  env-setup: 
+    name: Setting up production environment variables
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create .env.production
+        id: envvarsetup
+        run: touch .env.production
   build:
     name: Build And Release
     runs-on: ubuntu-latest
