@@ -15,7 +15,7 @@ fonttheme.typography.body1 = {
 }
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 345,
+    width: 280,
     display: 'inline-block',
   },
   content: {
@@ -35,13 +35,14 @@ const useStyles = makeStyles((theme) => ({
 
 function ImgMediaCard(props) {
   const classes = useStyles();
+  const displayStars = props.index === 0 ? false : true;
   return (
     <div>
-      <Card boxShadow={4} className={classes.root}>
+      <Card className={classes.root}>
           <CardMedia
             component="img"
             alt={props.member.Name}
-            height="140"
+            height="345"
             image={props.member.Photo}
             title={props.member.Name}
           />
@@ -64,13 +65,13 @@ function ImgMediaCard(props) {
           <IconButton href={props.member.Github}>
             <GitHubIcon fontSize="small"/>
           </IconButton>
-          <Rating
+          { displayStars ? <Rating
             value={props.member.Stars}
             size={"small"}
             style={{color:"white", marginLeft: 'auto', padding:10}}
             precision={0.5}
             readOnly
-          />
+          /> : null}
         </CardActions>
       </Card>
     </div>
