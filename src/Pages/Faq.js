@@ -8,15 +8,16 @@ import { makeStyles } from "@material-ui/core/styles";
 
 
 const useStyles = makeStyles((theme) => ({
-  
+ 
   align: {
-   
+    
     position: "relative",
     top: "100px",
     width: "1100px",
     marginBottom: "110px",
     marginRight: "auto",
     marginLeft: "auto",
+    alignSelf: "auto",
    
   }
 }));
@@ -25,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
 const Accordion = withStyles({
   root: {
     
-    border: '1px solid rgba(0, 0, 0, .125)',
+    border: '3px solid rgba(0, 0, 0, .125)',
     boxShadow: 'none',
     '&:not(:last-child)': {
       borderBottom: 0,
@@ -42,13 +43,13 @@ const Accordion = withStyles({
 
 const AccordionSummary = withStyles({
   root: {
-    
-    backgroundColor: 'rgba(0, 0, 0, .03)',
-    borderBottom: '1px solid rgba(0, 0, 0, .125)',
+    align:'center',
+    backgroundColor: 'rgba(0,0,128,0.1)',
+    borderBottom: '5px solid rgba(0, 0, 0, .125)',
     marginBottom: -1,
-    minHeight: 56,
+    minHeight: 60,
     '&$expanded': {
-      minHeight: 56,
+      minHeight: 100,
     },
   },
   content: {
