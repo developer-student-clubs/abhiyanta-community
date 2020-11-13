@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: "auto",
     marginLeft: "auto",
     alignSelf: "auto",
+    fontFamily:"IBM Plex Sans"
    
   }
 }));
@@ -25,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Accordion = withStyles({
   root: {
-    
+    fontFamily:"IBM Plex Sans" ,
     border: '3px solid rgba(0, 0, 0, .125)',
     boxShadow: 'none',
     '&:not(:last-child)': {
@@ -43,6 +44,8 @@ const Accordion = withStyles({
 
 const AccordionSummary = withStyles({
   root: {
+    
+    fontFamily:"IBM Plex Sans" ,
     align:'center',
     backgroundColor: 'rgba(0,0,128,0.1)',
     borderBottom: '5px solid rgba(0, 0, 0, .125)',
@@ -55,6 +58,7 @@ const AccordionSummary = withStyles({
   content: {
     '&$expanded': {
       margin: '12px 0',
+      fontFamily:"IBM Plex Sans" ,
     },
   },
   expanded: {},
