@@ -67,6 +67,7 @@ const AccordionSummary = withStyles({
 const AccordionDetails = withStyles((theme) => ({
   root: {
     padding: theme.spacing(2),
+    fontFamily:"IBM Plex Sans" ,
   },
 }))(MuiAccordionDetails);
 
@@ -77,15 +78,18 @@ export default function CustomizedAccordions() {
     setExpanded(newExpanded ? panel : false);
   };
   const classes = useStyles();
-  return (
-    <div className={classes.align}>
-      <Accordion square expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
-        <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-          <Typography>What qualification do you have to join this community?</Typography>
+  return ( 
+    
+    <div className={classes.align}> 
+    <h1><center>Frequently Asked Questions</center> </h1> 
+ 
+      <Accordion square expanded={expanded === 'panel1'} onChange={handleChange('panel1')} >
+        <AccordionSummary aria-controls="panel1d-content" id="panel1d-header" >
+          <Typography >1.What qualification do you have to join this community?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography><ul>
-          <li>People from any type of technical background can work into this community who have the willingness to learn something and implement it together.</li>
+          <li >People from any type of technical background can work into this community who have the willingness to learn something and implement it together.</li>
           <li>We prefer skills like problem solving, enthusiastic learners and an active listener with good capability of working on creative ideas/projects.</li>
           
         </ul>
@@ -96,7 +100,7 @@ export default function CustomizedAccordions() {
 
       <Accordion square expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
         <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
-          <Typography>What kind of Idea should be?</Typography>
+          <Typography>2.What kind of Idea should be?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -109,7 +113,7 @@ export default function CustomizedAccordions() {
 
       <Accordion square expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
         <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
-          <Typography>What Abhiyanta community will provide you?</Typography>
+          <Typography>3.What Abhiyanta community will provide you?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -126,7 +130,7 @@ export default function CustomizedAccordions() {
 
       <Accordion square expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
         <AccordionSummary aria-controls="panel4d-content" id="panel4d-header">
-          <Typography>Who runs Abhiyanta Community?</Typography>
+          <Typography>4. Who runs Abhiyanta Community?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -143,7 +147,7 @@ export default function CustomizedAccordions() {
 
       <Accordion square expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
         <AccordionSummary aria-controls="panel5d-content" id="panel5d-header">
-          <Typography>How does it work?</Typography>
+          <Typography>5.How does it work?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -167,7 +171,7 @@ export default function CustomizedAccordions() {
 
       <Accordion square expanded={expanded === 'panel6'} onChange={handleChange('panel6')}>
         <AccordionSummary aria-controls="panel6d-content" id="panel6d-header">
-          <Typography>What is the process of joining?</Typography>
+          <Typography>6. What is the process of joining?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -185,7 +189,7 @@ export default function CustomizedAccordions() {
 
       <Accordion square expanded={expanded === 'panel7'} onChange={handleChange('panel7')}>
         <AccordionSummary aria-controls="panel7d-content" id="panel7d-header">
-          <Typography>What is the purpose of the Abhiyanta Community?</Typography>
+          <Typography>7. What is the purpose of the Abhiyanta Community?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -201,7 +205,7 @@ export default function CustomizedAccordions() {
 
       <Accordion square expanded={expanded === 'panel8'} onChange={handleChange('panel8')}>
         <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
-          <Typography>What kind of knowledge one should gain by joining Abhiyanta Community?</Typography>
+          <Typography>8. What kind of knowledge one should gain by joining Abhiyanta Community?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -214,7 +218,9 @@ export default function CustomizedAccordions() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-
+      <br/>
+      <br/>
+      <h4><center>For More Questions Contact Us</center></h4>
 
 
 
