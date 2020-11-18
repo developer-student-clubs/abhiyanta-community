@@ -220,7 +220,7 @@ export default function CustomizedAccordions() {
       </Accordion>
       <br/>
       <br/>
-      <h4><center>For More Questions Contact Us</center></h4>
+      <h4><center>If you still have any queries, then fill up the the below form</center></h4>
 
 
 
