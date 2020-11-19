@@ -1,15 +1,17 @@
 import React from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
+import CustomizedAccordions  from './Faq';
+
 
 
 
 const useStyles = makeStyles((theme) => ({
     form: {
-        height: "1100px",
+        height: "500px",
         position: "relative",
-        left: "590px",
-        top: "140px"
+        left: "500px",
+        top: "0px"
     }
 }));
 
@@ -18,12 +20,17 @@ function Contact() {
     const classes = useStyles();
 
     return (
-
-        <iframe title="contactPage" className={classes.form} src="https://docs.google.com/forms/d/e/1FAIpQLSeunMIVOtBwmVF-IFLI924A6XCPPg2R52fwK5iWC1UX_K_cNg/viewform?embedded=true" width="640" height="673" frameborder="0" marginheight="0" marginwidth="0">
-
+        <div>
+      
+          < CustomizedAccordions />
+        <iframe title="contactPage" className={classes.form} src="https://form.typeform.com/to/NmQXsN32" width="500" height="500" frameborder="0" marginheight="0" marginwidth="0">
+         
         </iframe>
-
+         </div>
     );
 }
+
+
+
 
 export default Contact;
