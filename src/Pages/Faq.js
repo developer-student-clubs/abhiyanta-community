@@ -209,7 +209,8 @@ export default function CustomizedAccordions() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-           <ul>
+           
+          <ul>
           <li>Learn via Implementation</li>
           <li>Team work, leadership, soft skills</li>
           <li>Implementing Team member’s creative IDEAS</li>
