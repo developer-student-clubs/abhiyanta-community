@@ -28,7 +28,8 @@ function Header() {
     Home: "/",
     About: "/about",
     Team: "/team",
-  
+    Faq: "/faq",
+    
   };
 
   return (
