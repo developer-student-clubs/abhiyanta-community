@@ -1,0 +1,16 @@
+
+@media only screen and (min-width: 700px) {
+    .form{
+        left: 740px;
+    top: 0px;
+
+   
+    }
+  }
+
+.form{
+    height: 400px;
+    
+    position:relative;
+    margin-left:15px;
+}
