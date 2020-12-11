@@ -1,8 +1,11 @@
 
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 500px) {
     .align{
         margin-right: auto;
         margin-left: auto;
+        /* width:50px; */
+        padding-left: 0px;
+        padding-right: 0px;
     }
   }
 
@@ -14,7 +17,9 @@
     margin-bottom: 110px;
     margin-right: auto;
     margin-left: auto;
-    align-self: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    /* align-self: auto; */
     font-family: IBM Plex Sans;
-
+    /* width: 1650px; */
 }
