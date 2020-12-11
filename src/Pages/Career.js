@@ -1,6 +1,6 @@
 import React from "react";
 import Position from "../Components/Position";
-import { Container, Box, Hidden } from "@material-ui/core";
+import { Container } from "@material-ui/core";
 import { Careers } from "../Content/CareersContent";
 import { makeStyles } from '@material-ui/core/styles';
 
