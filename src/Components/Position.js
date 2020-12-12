@@ -5,16 +5,20 @@ import Collapse from '@material-ui/core/Collapse';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import clsx from 'clsx';
 import { createMuiTheme } from '@material-ui/core/styles';
-
+//#151719
+//#ACB9C3
 let fonttheme = createMuiTheme();
 fonttheme.typography.body1 = {
     fontSize: '0.85rem',
 }
 const useStyles = makeStyles((theme) => ({
     divBox: {
-        backgroundColor: '#252729',
+        backgroundColor: '#1C1E1F',
         borderRadius: '10px',
         padding: '20px',
+    },
+    defaultColor: {
+        color: '#B4C1CB',
     },
     expand: {
         transform: 'rotate(0deg)',
@@ -57,12 +61,12 @@ function PositionDiv(props) {
             </div>
             <Collapse in={expanded} timeout="auto" unmountOnExit>
                 <div className={classes.divBox}>
-                <p>
+                <p className={classes.defaultColor}>
                     {props.position.description}
                 </p>
                 <div>
                     <h6>Key Responsibilities</h6>
-                    <ul>
+                    <ul className={classes.defaultColor}>
                         {props.position.responsibility.map((text) =>
                             <li>{text}</li>
                         )}
@@ -70,7 +74,7 @@ function PositionDiv(props) {
                 </div>
                 <div>
                     <h6>Basic Qualifications</h6>
-                    <ul>
+                    <ul className={classes.defaultColor}>
                         {props.position.basic_qualification.map((text) =>
                             <li>{text}</li>
                         )}
@@ -78,7 +82,7 @@ function PositionDiv(props) {
                 </div>
                 <div>
                     <h6>Preferred Qualifications</h6>
-                    <ul>
+                    <ul className={classes.defaultColor}>
                         {props.position.pref_qualification.map((text) =>
                             <li>{text}</li>
                         )}
@@ -87,7 +91,7 @@ function PositionDiv(props) {
                 { props.position.advantages.length>0 ?                     
                     <div>
                         <h6>What will you get?</h6>
-                        <ul>
+                        <ul className={classes.defaultColor}>
                             {props.position.advantages.map((text) =>
                                 <li>{text}</li>
                             )}
