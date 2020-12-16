@@ -5,20 +5,25 @@ import Collapse from '@material-ui/core/Collapse';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import clsx from 'clsx';
 import { createMuiTheme } from '@material-ui/core/styles';
-//#151719
-//#ACB9C3
 let fonttheme = createMuiTheme();
 fonttheme.typography.body1 = {
     fontSize: '0.85rem',
 }
 const useStyles = makeStyles((theme) => ({
     divBox: {
-        backgroundColor: '#1C1E1F',
+        backgroundColor: '#6163FF',
         borderRadius: '10px',
         padding: '20px',
     },
     defaultColor: {
-        color: '#B4C1CB',
+        color: '#FFFFFF',
+    },
+    heading: {
+        backgroundColor: '#5153EF',
+        padding:'10px',
+        borderRadius:'50px',
+        color:'#EEEEEE',
+        fontSize: '18px'
     },
     expand: {
         transform: 'rotate(0deg)',
@@ -65,7 +70,7 @@ function PositionDiv(props) {
                     {props.position.description}
                 </p>
                 <div>
-                    <h6>Key Responsibilities</h6>
+                    <b className={classes.heading}>Key Responsibilities</b><br/><br/>
                     <ul className={classes.defaultColor}>
                         {props.position.responsibility.map((text) =>
                             <li>{text}</li>
@@ -73,7 +78,7 @@ function PositionDiv(props) {
                     </ul>
                 </div>
                 <div>
-                    <h6>Basic Qualifications</h6>
+                    <b className={classes.heading}>Basic Qualifications</b><br/><br/>
                     <ul className={classes.defaultColor}>
                         {props.position.basic_qualification.map((text) =>
                             <li>{text}</li>
@@ -81,7 +86,7 @@ function PositionDiv(props) {
                     </ul>
                 </div>
                 <div>
-                    <h6>Preferred Qualifications</h6>
+                    <b className={classes.heading}>Preferred Qualifications</b><br/><br/>
                     <ul className={classes.defaultColor}>
                         {props.position.pref_qualification.map((text) =>
                             <li>{text}</li>
@@ -90,7 +95,7 @@ function PositionDiv(props) {
                 </div>
                 { props.position.advantages.length>0 ?                     
                     <div>
-                        <h6>What will you get?</h6>
+                        <b className={classes.heading}>What will you get?</b><br/><br/>
                         <ul className={classes.defaultColor}>
                             {props.position.advantages.map((text) =>
                                 <li>{text}</li>
