@@ -17,6 +17,7 @@ import Notfound from "./Pages/NotFound";
 import Team from "./Pages/Team";
 import Project from "./Pages/Project";
 import Contact from "./Pages/Contact";
+import Career from "./Pages/Career";
 // Initialize Google Analytics
 ReactGA.initialize(process.env.REACT_APP_GA_CODE);
 
@@ -71,6 +72,11 @@ const App = () => {
             component={Team}
             layout={LayoutDefault}
           />
+
+          <AppRoute
+           exact path="/careers"
+            component={Career}
+             layout={LayoutDefault} />
           <AppRoute
             path="/NotFound"
             component={Notfound}
