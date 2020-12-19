@@ -3,7 +3,6 @@
     .align{
         margin-right: auto;
         margin-left: auto;
-        /* width:50px; */
         padding-left: 0px;
         padding-right: 0px;
     }
@@ -17,8 +16,6 @@
     margin-bottom: 110px;
     margin-right: auto;
     margin-left: auto;
-    /* padding-left: 30px; */
-    /* padding-right: 30px;  */
     align-self: auto;
     font-family: IBM Plex Sans;
     max-width: 1100px;
