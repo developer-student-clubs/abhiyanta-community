@@ -116,7 +116,7 @@ export default function CustomizedAccordions() {
           <Typography>
             <ul>
               <li>
-                Abhiyanta Community is run by the innovators, of the innovators and for the innovators.(master slave point)
+                Abhiyanta Community is run by the innovators, of the innovators and for the innovators.
           </li>
             </ul>
           </Typography>
