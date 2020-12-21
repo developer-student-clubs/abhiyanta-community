@@ -8,6 +8,8 @@ import Faq from "../Pages/Faq";
 import Notfound from "../Pages/NotFound";
 import Team from "../Pages/Team";
 import Project from "../Pages/Project";
+import Career from "../Pages/Career";
+
 
 function NavBar() {
   return (
@@ -18,7 +20,8 @@ function NavBar() {
         <Route exact path="/team" component={Team} />        
         <Route exact path="/project" component={Project} />
         <Route exact path="/contact" component={Contact} />               
-         <Route exact path="/faq" component={Faq} />  
+        <Route exact path="/faq" component={Faq} />  
+        <Route exact path="/careers" component={Career} />  
         <Route path="/NotFound" component={Notfound} />
         <Redirect to="/NotFound" />
       </Switch>
