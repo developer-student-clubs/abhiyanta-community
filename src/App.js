@@ -12,7 +12,7 @@ import LayoutDefault from "./layouts/LayoutDefault";
 import Home from "./views/Home";
 // Pages
 import About from "./Pages/About";
-import Faq from "./Pages/Faq";
+//import Faq from "./Pages/Faq";
 import Notfound from "./Pages/NotFound";
 import Team from "./Pages/Team";
 import Project from "./Pages/Project";
@@ -55,10 +55,7 @@ const App = () => {
           component={Contact}
            layout={LayoutDefault} />
 
-          <AppRoute
-           exact path="/faq" 
-           component={Faq} 
-           layout={LayoutDefault} />
+         
 
 
           <AppRoute

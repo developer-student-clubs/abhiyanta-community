@@ -11,7 +11,7 @@ const Logo = ({ className, ...props }) => {
       <h1 className="m-0">
         <Link to="/">
           <Image
-            src={process.env.PUBLIC_URL + "/Assets/" + props.image}
+            src={`${process.env.PUBLIC_URL}/Assets/${props.image}`}
             alt="Open"
             width={55}
             height={55}
