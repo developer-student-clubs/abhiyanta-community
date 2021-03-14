@@ -12,12 +12,14 @@ import LayoutDefault from "./layouts/LayoutDefault";
 import Home from "./views/Home";
 // Pages
 import About from "./Pages/About";
-//import Faq from "./Pages/Faq";
 import Notfound from "./Pages/NotFound";
 import Team from "./Pages/Team";
 import Project from "./Pages/Project";
 import Contact from "./Pages/Contact";
 import Career from "./Pages/Career";
+import Event from "./Pages/Event";
+
+
 // Initialize Google Analytics
 ReactGA.initialize(process.env.REACT_APP_GA_CODE);
 
@@ -55,18 +57,24 @@ const App = () => {
           component={Contact}
            layout={LayoutDefault} />
 
-         
-
 
           <AppRoute
            exact path="/project"
             component={Project}
              layout={LayoutDefault} />
+
+           
              
           <AppRoute
             exact
             path="/team"
             component={Team}
+            layout={LayoutDefault}
+          />
+           <AppRoute
+            exact
+            path="/event"
+            component={Event}
             layout={LayoutDefault}
           />
 
