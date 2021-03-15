@@ -5,8 +5,6 @@ import { Container, Paper, Button } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
 import FormControl from '@material-ui/core/FormControl';
-import InputLabel from '@material-ui/core/InputLabel';
-import Select from '@material-ui/core/Select';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -36,8 +34,8 @@ const useStyles = makeStyles((theme) => ({
         paddingBottom: 40
     },
     paper: {
-        minWidth: 1103,
-        maxWidth: 1103,
+        minWidth: "100%",
+        maxWidth: "100%",
         padding: 20,
         marginLeft: 'auto',
         marginRight: 'auto',
@@ -48,6 +46,10 @@ const useStyles = makeStyles((theme) => ({
     },
     inputwidth: {
         width: "100%",
+    },
+    confirm: {
+        color: 'green',
+        fontSize: 15
     }
 }));
 
@@ -58,9 +60,8 @@ function Contact() {
         name: "",
         phno: "",
         email: "",
-        query: ""
+        query: "",
     });
-
     const { name, phno, email, query } = data;
 
     const handleChange = (event) => {
@@ -87,8 +88,9 @@ function Contact() {
                 name: "",
                 phno: "",
                 email: "",
-                query: ""
+                query: "",
             });
+            document.getElementById('confirm').innerHTML = "Thanks for your response! We'll get back to you as soon as possible.";
         } catch (err) {
             console.log(err);
         }
@@ -99,65 +101,48 @@ function Contact() {
             < CustomizedAccordions />
             <Container>
 
-                {/* <iframe title="contactPage" className="form" src="https://form.typeform.com/to/NmQXsN32" frameborder="0" marginheight="0" marginwidth="0">
-                </iframe> */}
                 <Paper className={classes.paper} elevation={3}>
-                    <FormControl variant="outlined" className={classes.formControl} >
-                        <div className={classes.formpad}>
-                            <div className={classes.pad}>
-                                <InputLabel className={classes.formpad} htmlFor="outlined-age-native-simple">Position</InputLabel>
-                                <Select
-                                    native
-                                    // value={state.age}
-                                    // onChange={handleChange}
-                                    className={classes.inputwidth}
-                                    label="Position"
-                                    inputProps={{
-                                        name: "position",
-                                        id: "outlined-age-native-simple"
-                                    }}
-                                >
-                                    <option aria-label="None" value="" />
-                                    <option value={10}>Technical Lead</option>
-                                    <option value={20}>Non-Technical Lead</option>
-                                    <option value={30}>Innovators</option>
-                                </Select>
+                    <form onSubmit={handleSubmit} >
+                        <FormControl variant="outlined" className={classes.formControl} >
+                            <div className={classes.formpad}>
+                                <div className={classes.pad}>
 
+                                    <TextField iid="outlined-multiline-static" className={classes.inputwidth}
+                                        onChange={handleChange} variant="outlined" required id="name" name="name" value={name} label="Name" />
+                                </div>
+                                <div className={classes.pad}>
+
+                                    <TextField iid="outlined-multiline-static" className={classes.inputwidth}
+                                        onChange={handleChange} variant="outlined" id="phno" name="phno" value={phno} label="Contact No" /> </div>
+                                <div className={classes.pad}>
+
+                                    <TextField iid="outlined-multiline-static" className={classes.inputwidth}
+                                        onChange={handleChange} variant="outlined" required id="email" type="email" name="email" value={email} label="Email Id" />  </div>
+                                <div className={classes.pad}>
+
+                                    <TextField
+                                        id="outlined-multiline-static"
+                                        variant="outlined"
+                                        label="Type your query here..."
+                                        multiline
+                                        required
+                                        rows={4}
+                                        name="query"
+                                        value={query}
+                                        onChange={handleChange}
+                                        className={classes.inputwidth}
+                                    />
+                                </div>
                             </div>
                             <div className={classes.pad}>
-
-                                <TextField iid="outlined-multiline-static" className={classes.inputwidth}
-                                    onChange={handleChange} variant="outlined" required id="name" name="name" value={name} label="Name" />
-                            </div>
-                            <div className={classes.pad}>
-
-                                <TextField iid="outlined-multiline-static" className={classes.inputwidth}
-                                    onChange={handleChange} variant="outlined" required id="phno" name="phno" value={phno} label="Contact No" /> </div>
-                            <div className={classes.pad}>
-
-                                <TextField iid="outlined-multiline-static" className={classes.inputwidth}
-                                    onChange={handleChange} variant="outlined" required id="email" name="email" value={email} label="Email Id" />  </div>
-                            <div className={classes.pad}>
-
-                                <TextField
-                                    id="outlined-multiline-static"
-                                    variant="outlined"
-                                    label="Type your query here..."
-                                    multiline
-                                    rows={4}
-                                    name="query"
-                                    value={query}
-                                    onChange={handleChange}
-                                    className={classes.inputwidth}
-                                />
-                            </div>
-                        </div>
-                        <div className={classes.pad}>
-                            <Button type="button" variant="contained" onClick={handleSubmit} color="primary">
-                                Submit
+                                <Button type="submit" variant="contained" color="primary">
+                                    Submit
                           </Button>
-                        </div>
-                    </FormControl>
+                            </div>
+                            <label className={classes.confirm} id="confirm" name="confirm"></label>
+                        </FormControl>
+                    </form>
+
                 </Paper>
             </Container>
 

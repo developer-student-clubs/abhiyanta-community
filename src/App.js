@@ -52,26 +52,26 @@ const App = () => {
             component={About}
             layout={LayoutDefault}
           />
-          <AppRoute 
-          exact path="/contact" 
-          component={Contact}
-           layout={LayoutDefault} />
+          <AppRoute
+            exact path="/contact"
+            component={Contact}
+            layout={LayoutDefault} />
 
 
           <AppRoute
-           exact path="/project"
+            exact path="/project"
             component={Project}
-             layout={LayoutDefault} />
+            layout={LayoutDefault} />
 
-           
-             
+
+
           <AppRoute
             exact
             path="/team"
             component={Team}
             layout={LayoutDefault}
           />
-           <AppRoute
+          <AppRoute
             exact
             path="/event"
             component={Event}
@@ -79,9 +79,9 @@ const App = () => {
           />
 
           <AppRoute
-           exact path="/careers"
+            exact path="/careers"
             component={Career}
-             layout={LayoutDefault} />
+            layout={LayoutDefault} />
           <AppRoute
             path="/NotFound"
             component={Notfound}

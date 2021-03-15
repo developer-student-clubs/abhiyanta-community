@@ -17,16 +17,16 @@ function NavBar() {
       <Header></Header>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/team" component={Team} />        
+        <Route exact path="/team" component={Team} />
         <Route exact path="/project" component={Project} />
-        <Route exact path="/contact" component={Contact} />               
-        <Route exact path="/faq" component={Faq} />  
-        <Route exact path="/careers" component={Career} />  
-        <Route exact path="/event" component={Event} />  
+        <Route exact path="/contact" component={Contact} />
+        <Route exact path="/faq" component={Faq} />
+        <Route exact path="/careers" component={Career} />
+        <Route exact path="/event" component={Event} />
         <Route path="/NotFound" component={Notfound} />
         <Redirect to="/NotFound" />
       </Switch>
- 
+
     </div>
   );
 }
