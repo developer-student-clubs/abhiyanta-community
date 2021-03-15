@@ -29,6 +29,7 @@ function Header() {
     About: "/about",
     Team: "/team",
     Faq: "/faq",
+    Event: "/event"
     
   };
 
