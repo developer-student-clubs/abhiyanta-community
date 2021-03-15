@@ -1,16 +1,10 @@
 import React from 'react';
 import CustomizedAccordions from './Faq';
 import "./Contact.css";
-import { Container, Paper, useTheme } from '@material-ui/core';
-
+import { Container, Paper, Button } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
-import Input from '@material-ui/core/Input';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
-import Chip from '@material-ui/core/Chip';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -42,52 +36,58 @@ const useStyles = makeStyles((theme) => ({
     paper: {
         minWidth: 400,
         maxWidth: 300,
-        paddingLeft: 50,
+        padding: 20,
         marginLeft: 'auto',
-        marginRight: 'auto'
+        marginRight: 'auto',
+        backgroundColor: '#EEEEEE'
     },
     formpad: {
         paddingTop: 20
     }
 }));
 
-const ITEM_HEIGHT = 48;
-const ITEM_PADDING_TOP = 8;
-const MenuProps = {
-    PaperProps: {
-        style: {
-            maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-            width: 250,
-        },
-    },
-};
-
-const names = [
-    'Technical Lead',
-    'Non-Technical Lead',
-    'Innovators'
-];
-function getStyles(name, personName, theme) {
-    return {
-        fontWeight:
-            personName.indexOf(name) === -1
-                ? theme.typography.fontWeightRegular
-                : theme.typography.fontWeightMedium,
-    };
-}
-
 
 function Contact() {
     const classes = useStyles();
-    const theme = useTheme();
-    const [personName, setPersonName] = React.useState([]);
+    const [data, SetData] = React.useState({
+        name: "",
+        phno: "",
+        email: "",
+        query: ""
+    });
+
+    const {name,phno,email,query} = data;
 
     const handleChange = (event) => {
-        setPersonName(event.target.value);
+    SetData({ ...data, [event.target.name]: event.target.value});
     };
 
-
-    return (
+    const handleSubmit = async (event) => {
+    event.preventDefault();
+        try {
+            const response = await fetch(
+            "https://v1.nocodeapi.com/squarebat/google_sheets/MMUvHVCDOmWjmFcg?tabId=Sheet2", {
+                method: 'POST',
+                headers: {
+                'Content-Type': 'application/json'
+                },
+                body: JSON.stringify([
+                    [new Date().toDateString(),name,phno,email,query]
+                ])
+            }
+            );
+            await response.json();
+            SetData({ ...data, 
+            name: "",
+            phno: "",
+            email: "",
+            query: ""
+            });
+        } catch (err) {
+            console.log(err);
+        }
+    };
+       return (
         <div>
 
             < CustomizedAccordions />
@@ -97,56 +97,39 @@ function Contact() {
                 </iframe> */}
                 <Paper className={classes.paper} elevation={3}>
                     <FormControl className={classes.formControl}>
-
-                        <InputLabel id="demo-mutiple-chip-label">Position</InputLabel>
-                        <Select
-                            labelId="demo-mutiple-chip-label"
-                            id="demo-mutiple-chip"
-                            multiple
-                            value={personName}
-                            onChange={handleChange}
-                            input={<Input id="select-multiple-chip" />}
-                            renderValue={(selected) => (
-                                <div className={classes.chips}>
-                                    {selected.map((value) => (
-                                        <Chip key={value} label={value} className={classes.chip} />
-                                    ))}
-                                </div>
-                            )}
-                            MenuProps={MenuProps}
-                        >
-                            {names.map((name) => (
-                                <MenuItem key={name} value={name} style={getStyles(name, personName, theme)}>
-                                    {name}
-                                </MenuItem>
-                            ))}
-                        </Select>
                         <div className={classes.formpad}>
 
                             <div className={classes.pad}>
 
                                 <TextField iid="outlined-multiline-static"
-                                    variant="outlined" required id="standard-required" label="Name" />
+                                    onChange={handleChange} variant="outlined" required id="name" name="name" value={name} label="Name" />
                             </div>
                             <div className={classes.pad}>
 
                                 <TextField iid="outlined-multiline-static"
-                                    variant="outlined" required id="standard-required" label="Contact" /> </div>
+                                    onChange={handleChange} variant="outlined" required id="phno" name="phno" value={phno} label="Contact No" /> </div>
                             <div className={classes.pad}>
 
                                 <TextField iid="outlined-multiline-static"
-                                    variant="outlined" required id="standard-required" label="Email" />  </div>
+                                    onChange={handleChange} variant="outlined" required id="email" name="email" value={email} label="Email Id" />  </div>
                             <div className={classes.pad}>
 
                                 <TextField
                                     id="outlined-multiline-static"
                                     variant="outlined"
-                                    label="Brief Introduction"
+                                    label="Type your query here..."
                                     multiline
                                     rows={4}
-
+                                    name ="query"
+                                    value={query}
+                                    onChange={handleChange}
                                 />
                             </div>
+                        </div>
+                        <div className={classes.pad}>
+                          <Button type="button" variant="contained" onClick={handleSubmit} color="primary">
+                            Submit
+                          </Button>
                         </div>
                     </FormControl>
                 </Paper>
