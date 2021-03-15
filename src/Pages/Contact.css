@@ -1,11 +1,19 @@
 
 @media only screen and (min-width: 700px) {
     .form{
+<<<<<<< HEAD
         width: 100%;              
+=======
+        width: 100%;
+>>>>>>> master
     }
   }
 
 .form{
     height: 450px;
+<<<<<<< HEAD
     width: 700px; 
+=======
+    width: 100%; 
+>>>>>>> master
 }

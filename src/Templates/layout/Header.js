@@ -140,6 +140,12 @@ const Header = ({
                     </li>
 
                     <li>
+                      <Link to="/careers" onClick={closeMenu}>
+                        Careers
+                      </Link>
+                    </li>
+
+                    <li>
                       <Link to="/contact" onClick={closeMenu}>
                         Contact Us
                       </Link>
