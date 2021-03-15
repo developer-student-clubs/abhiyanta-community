@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles, ThemeProvider } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
+import Button from '@material-ui/core/Button';
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import { createMuiTheme } from "@material-ui/core/styles";
@@ -74,18 +75,22 @@ function ImgMediaCard(props) {
 
               <Typography variant="body2" component="p">
                 {props.member.add1} <br />
-                
                 {props.member.add2}
               </Typography>
 
               <Typography variant="body2" component="p">
                 {props.member.conduct} <br /> <br />
-                {props.member.link}
+                {props.member.date1}<br/>
+                {props.member.date1}
               </Typography>
 
               <Typography variant="body2" component="p">
                 {props.member.platform} <br />
               </Typography>
+              {props.member.current? <Button variant="contained" color="primary" href="https://forms.gle/EbuqBZfUHS7WYN7r6">
+    Regiseter
+</Button>:null}
+             
             </ThemeProvider>
           </CardContent>
         </div>
