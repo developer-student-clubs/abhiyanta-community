@@ -1,6 +1,6 @@
 export const event = [
     {
-        Category: "Current Events:",
+        Category: "Current Events",
         Events: [
             {
                 title: "Basic Electronics Battle (2X March 2021)",
@@ -17,7 +17,7 @@ export const event = [
     } ,   
     {   
 
-        Category: "Past Events:",
+        Category: "Past Events",
         Events: [
             {
                 title: "e-Yantra awareness program (14 August 2020)",
