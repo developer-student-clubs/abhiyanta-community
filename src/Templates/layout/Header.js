@@ -127,6 +127,11 @@ const Header = ({
                         Projects
                       </Link>
                     </li>
+                    <li>
+                      <Link to="/event" onClick={closeMenu}>
+                        Events
+                      </Link>
+                    </li>
 
                     <li>
                       <Link to="/careers" onClick={closeMenu}>

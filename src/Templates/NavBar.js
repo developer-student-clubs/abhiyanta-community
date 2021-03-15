@@ -9,7 +9,7 @@ import Notfound from "../Pages/NotFound";
 import Team from "../Pages/Team";
 import Project from "../Pages/Project";
 import Career from "../Pages/Career";
-
+import Event from "../Pages/Event";
 
 function NavBar() {
   return (
@@ -22,6 +22,7 @@ function NavBar() {
         <Route exact path="/contact" component={Contact} />               
         <Route exact path="/faq" component={Faq} />  
         <Route exact path="/careers" component={Career} />  
+        <Route exact path="/event" component={Event} />  
         <Route path="/NotFound" component={Notfound} />
         <Redirect to="/NotFound" />
       </Switch>
