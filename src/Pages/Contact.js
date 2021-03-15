@@ -48,6 +48,10 @@ const useStyles = makeStyles((theme) => ({
     },
     inputwidth: {
         width: "100%",
+    },
+    confirm: {
+        color: 'green',
+        fontSize: 15
     }
 }));
 
@@ -58,10 +62,9 @@ function Contact() {
         name: "",
         phno: "",
         email: "",
-        query: ""
+        query: "",
     });
-
-    const { name, phno, email, query } = data;
+    const { name, phno, email, query, confirm } = data;
 
     const handleChange = (event) => {
         SetData({ ...data, [event.target.name]: event.target.value });
@@ -87,8 +90,9 @@ function Contact() {
                 name: "",
                 phno: "",
                 email: "",
-                query: ""
+                query: "",
             });
+            document.getElementById('confirm').innerHTML = "Thanks for your response! We'll get back to you as soon as possible.";
         } catch (err) {
             console.log(err);
         }
@@ -99,31 +103,10 @@ function Contact() {
             < CustomizedAccordions />
             <Container>
 
-                {/* <iframe title="contactPage" className="form" src="https://form.typeform.com/to/NmQXsN32" frameborder="0" marginheight="0" marginwidth="0">
-                </iframe> */}
                 <Paper className={classes.paper} elevation={3}>
+                    <form onSubmit={handleSubmit} >
                     <FormControl variant="outlined" className={classes.formControl} >
                         <div className={classes.formpad}>
-                            <div className={classes.pad}>
-                                <InputLabel className={classes.formpad} htmlFor="outlined-age-native-simple">Position</InputLabel>
-                                <Select
-                                    native
-                                    // value={state.age}
-                                    // onChange={handleChange}
-                                    className={classes.inputwidth}
-                                    label="Position"
-                                    inputProps={{
-                                        name: "position",
-                                        id: "outlined-age-native-simple"
-                                    }}
-                                >
-                                    <option aria-label="None" value="" />
-                                    <option value={10}>Technical Lead</option>
-                                    <option value={20}>Non-Technical Lead</option>
-                                    <option value={30}>Innovators</option>
-                                </Select>
-
-                            </div>
                             <div className={classes.pad}>
 
                                 <TextField iid="outlined-multiline-static" className={classes.inputwidth}
@@ -132,11 +115,11 @@ function Contact() {
                             <div className={classes.pad}>
 
                                 <TextField iid="outlined-multiline-static" className={classes.inputwidth}
-                                    onChange={handleChange} variant="outlined" required id="phno" name="phno" value={phno} label="Contact No" /> </div>
+                                    onChange={handleChange} variant="outlined" id="phno" name="phno" value={phno} label="Contact No" /> </div>
                             <div className={classes.pad}>
 
                                 <TextField iid="outlined-multiline-static" className={classes.inputwidth}
-                                    onChange={handleChange} variant="outlined" required id="email" name="email" value={email} label="Email Id" />  </div>
+                                    onChange={handleChange} variant="outlined" required id="email" type="email" name="email" value={email} label="Email Id" />  </div>
                             <div className={classes.pad}>
 
                                 <TextField
@@ -144,6 +127,7 @@ function Contact() {
                                     variant="outlined"
                                     label="Type your query here..."
                                     multiline
+                                    required
                                     rows={4}
                                     name="query"
                                     value={query}
@@ -153,11 +137,14 @@ function Contact() {
                             </div>
                         </div>
                         <div className={classes.pad}>
-                            <Button type="button" variant="contained" onClick={handleSubmit} color="primary">
+                            <Button type="submit" variant="contained" color="primary">
                                 Submit
                           </Button>
                         </div>
+                        <label className={classes.confirm} id="confirm" name="confirm"></label>    
                     </FormControl>
+                    </form>
+                    
                 </Paper>
             </Container>
 

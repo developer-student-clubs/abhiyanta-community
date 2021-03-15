@@ -60,13 +60,21 @@ const useStyles = makeStyles((theme) => ({
   },
   input: {
     width: "100%"
-  }
+  },
+  confirm: {
+      color: 'green',
+      fontSize: 15,
+      paddingLeft: 10
+  },
+  inputwidth: {
+    width: "100%",
+  },
 }));
 
 const MenuProps = {
     PaperProps: {
         style: {
-            width: 250,
+            width: '100%',
             padding: 10
         },
     },
@@ -108,7 +116,7 @@ function DisplayCareers() {
     intro: ""
   });
   
-  const {positionName,personName,phno,email,branch,cid,intro} = data;
+  const {positionName,personName,phno,email,intro} = data;
 
   const handleChange = (event) => {
     SetData({ ...data, [event.target.name]: event.target.value});
@@ -124,7 +132,7 @@ function DisplayCareers() {
             'Content-Type': 'application/json'
           },
           body: JSON.stringify([
-            [new Date().toDateString(),personName,phno,email,branch,cid,JSON.stringify(positionName),intro]
+            [new Date().toDateString(),personName,phno,email,JSON.stringify(positionName),intro]
           ])
         }
       );
@@ -134,10 +142,9 @@ function DisplayCareers() {
         personName: "",
         phno: "",
         email: "",
-        branch: "",
-        cid: "",
         intro: ""
       });
+      document.getElementById('confirm').innerHTML = "Thanks for your response! We'll get back to you as soon as possible.";
     } catch (err) {
       console.log(err);
     }
@@ -155,9 +162,8 @@ function DisplayCareers() {
         ))}
       
           <h4>Apply now to become a member of the community!</h4><hr/>
-          {/* <iframe title="contactPage" className="form" src="https://form.typeform.com/to/NmQXsN32" frameborder="0" marginheight="0" marginwidth="0">
-          </iframe> */}
           <Paper className={classes.paper} elevation={3}>
+            <form onSubmit={handleSubmit} >
                     <FormControl className={classes.formControl}>
                     <InputLabel id="demo-mutiple-chip-label">Preferred Position</InputLabel>
                         <Select
@@ -165,6 +171,7 @@ function DisplayCareers() {
                             id="positionName"
                             name="positionName"
                             multiple
+                            required
                             value={positionName}
                             onChange={handleChange}
                             input={<Input id="select-multiple-chip" />}
@@ -184,53 +191,44 @@ function DisplayCareers() {
                                 </MenuItem>
                             ))}
                         </Select>
-                        <div className={classes.formpad}>
+                        <div className={classes.pad}>
 
-                            <div className={classes.pad}>
-
-                                <TextField iid="outlined-multiline-static"
-                                    variant="outlined" required id="name" onChange={handleChange} name="personName" label="Name" value={personName} />
-                            </div>
-                            <div className={classes.pad}>
-
-                                <TextField iid="outlined-multiline-static"
-                                    variant="outlined" required id="phno" onChange={handleChange} name="phno" label="Contact" value={phno}/> </div>
-                            <div className={classes.pad}>
-
-                                <TextField iid="outlined-multiline-static"
-                                    variant="outlined" required id="email" onChange={handleChange} name="email" label="Email" value={email}/>  </div>
-                            <div className={classes.pad}>
-
-                              <TextField iid="outlined-multiline-static"
-                              variant="outlined" required id="branch" name="branch" onChange={handleChange} label="Branch" value={branch}/>  
-                            </div>
-                            <div className={classes.pad}>
-
-                              <TextField InputProps = {TextProps} iid="outlined-multiline-static"
-                              variant="outlined" required id="cid" name="cid" onChange={handleChange} label="College ID" value={cid}/>  
-                            </div>
-                            <div className={classes.pad}>
-
-                                <TextField
-                                    iid="outlined-multiline-static"
-                                    id="intro"
-                                    name="intro"
-                                    variant="outlined"
-                                    label="Why do you wish to join us?"
-                                    multiline
-                                    rows={4}
-                                    value={intro}
-                                    onChange={handleChange}
-                                />
-                            </div>
+                            <TextField iid="outlined-multiline-static" className={classes.inputwidth}
+                                variant="outlined" required id="name" onChange={handleChange} name="personName" label="Name" value={personName} />
                         </div>
                         <div className={classes.pad}>
-                          <Button type="button" variant="contained" onClick={handleSubmit} color="primary">
+
+                            <TextField iid="outlined-multiline-static" className={classes.inputwidth}
+                                variant="outlined" id="phno" onChange={handleChange} name="phno" label="Contact No" value={phno}/> </div>
+                        <div className={classes.pad}>
+
+                            <TextField iid="outlined-multiline-static" className={classes.inputwidth}
+                                variant="outlined" required id="email" onChange={handleChange} type="email" name="email" label="Email" value={email}/>  </div>
+
+                        <div className={classes.pad}>
+
+                            <TextField
+                                className={classes.inputwidth}
+                                iid="outlined-multiline-static"
+                                id="intro"
+                                name="intro"
+                                variant="outlined"
+                                label="Brief Introduction"
+                                multiline
+                                required
+                                rows={4}
+                                value={intro}
+                                onChange={handleChange}
+                            />
+                        </div>
+                        <div className={classes.pad}>
+                          <Button type="submit" variant="contained" color="primary">
                             Submit
                           </Button>
                         </div>
-
+                        <label className={classes.confirm} id="confirm" name="confirm"></label>    
                     </FormControl>
+                    </form>
                 </Paper>
       </Container>
     </div>
