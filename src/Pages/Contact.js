@@ -124,23 +124,7 @@ function Contact() {
                                     <option value={20}>Non-Technical Lead</option>
                                     <option value={30}>Innovators</option>
                                 </Select>
-                                {/* <InputLabel htmlFor="outlined-age-native-simple">Position</InputLabel>
-                                <Select
-                                    native
-                                    // value={state.age}
-                                    // onChange={handleChange}
-                                    className={classes.inputwidth}
-                                    label="position"
-                                    inputProps={{
-                                        name: 'position',
-                                        id: 'outlined-age-native-simple',
-                                    }}
-                                >
-                                    <option aria-label="None" value="" />
-                                    <option value={10}>Technical Lead</option>
-                                    <option value={20}>Non-Technical Lead</option>
-                                    <option value={30}>Innovators</option>
-                                </Select> */}
+
                             </div>
                             <div className={classes.pad}>
 
