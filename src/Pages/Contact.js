@@ -62,7 +62,7 @@ function Contact() {
         email: "",
         query: "",
     });
-    const { name, phno, email, query, confirm } = data;
+    const { name, phno, email, query } = data;
 
     const handleChange = (event) => {
         SetData({ ...data, [event.target.name]: event.target.value });

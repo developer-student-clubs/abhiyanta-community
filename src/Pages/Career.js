@@ -100,13 +100,8 @@ function getStyles(name, positionName, theme) {
 
 function DisplayCareers() {
   const classes = useStyles();
-  const TextProps = {
-    PaperProps: {
-      style: {
-        width: 250,
-      },
-    },
-  };
+
+
 
   const theme = useTheme();
   const [data, SetData] = React.useState({
