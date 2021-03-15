@@ -5,8 +5,6 @@ import { Container, Paper, Button } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
 import FormControl from '@material-ui/core/FormControl';
-import InputLabel from '@material-ui/core/InputLabel';
-import Select from '@material-ui/core/Select';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -36,8 +34,8 @@ const useStyles = makeStyles((theme) => ({
         paddingBottom: 40
     },
     paper: {
-        minWidth: 1103,
-        maxWidth: 1103,
+        minWidth: "100%",
+        maxWidth: "100%",
         padding: 20,
         marginLeft: 'auto',
         marginRight: 'auto',
@@ -104,26 +102,7 @@ function Contact() {
                 <Paper className={classes.paper} elevation={3}>
                     <FormControl variant="outlined" className={classes.formControl} >
                         <div className={classes.formpad}>
-                            <div className={classes.pad}>
-                                <InputLabel className={classes.formpad} htmlFor="outlined-age-native-simple">Position</InputLabel>
-                                <Select
-                                    native
-                                    // value={state.age}
-                                    // onChange={handleChange}
-                                    className={classes.inputwidth}
-                                    label="Position"
-                                    inputProps={{
-                                        name: "position",
-                                        id: "outlined-age-native-simple"
-                                    }}
-                                >
-                                    <option aria-label="None" value="" />
-                                    <option value={10}>Technical Lead</option>
-                                    <option value={20}>Non-Technical Lead</option>
-                                    <option value={30}>Innovators</option>
-                                </Select>
 
-                            </div>
                             <div className={classes.pad}>
 
                                 <TextField iid="outlined-multiline-static" className={classes.inputwidth}
