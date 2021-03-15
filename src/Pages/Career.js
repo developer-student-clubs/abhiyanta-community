@@ -153,6 +153,25 @@ function DisplayCareers() {
           <FormControl variant="outlined" className={classes.formControl}>
 
             <div className={classes.formpad}>
+              <div className={classes.pad}>
+
+                <InputLabel htmlFor="outlined-age-native-simple">Position</InputLabel>
+                <Select
+                  native
+                  id="positionName"
+                  name="positionName"
+                  value={positionName}
+                  onChange={handleChange}
+                  className={classes.inputwidth}
+                  label="Position"
+
+                >
+                  <option aria-label="None" value="" />
+                  <option value={"Technical Lead"}>Technical Lead</option>
+                  <option value={"Non-Technical Lead"}>Non-Technical Lead</option>
+                  <option value={"Innovators"}>Innovators</option>
+                </Select>
+              </div>
 
               <div className={classes.pad}>
                 <TextField iid="outlined-multiline-static" className={classes.inputwidth}
@@ -177,48 +196,29 @@ function DisplayCareers() {
                   variant="outlined" required id="cid" name="cid" onChange={handleChange} label="College ID" value={cid} />
               </div>
               <div>
+
                 <div className={classes.pad}>
 
-                  <InputLabel className={classes.paddrop} htmlFor="outlined-age-native-simple">Position</InputLabel>
-                  <Select
-                    native
-                    id="positionName"
-                    name="positionName"
-                    value={positionName}
+                  <TextField
+                    iid="outlined-multiline-static"
+                    id="intro"
+                    name="intro"
+                    variant="outlined"
+                    label="Why do you wish to join us?"
+                    multiline
+                    rows={4}
+                    value={intro}
                     onChange={handleChange}
                     className={classes.inputwidth}
-                    label="Position"
-
-                  >
-                    <option aria-label="None" value="" />
-                    <option value={"Technical Lead"}>Technical Lead</option>
-                    <option value={"Non-Technical Lead"}>Non-Technical Lead</option>
-                    <option value={"Innovators"}>Innovators</option>
-                  </Select>
+                  />
                 </div>
               </div>
               <div className={classes.pad}>
-
-                <TextField
-                  iid="outlined-multiline-static"
-                  id="intro"
-                  name="intro"
-                  variant="outlined"
-                  label="Why do you wish to join us?"
-                  multiline
-                  rows={4}
-                  value={intro}
-                  onChange={handleChange}
-                  className={classes.inputwidth}
-                />
+                <Button type="button" variant="contained" onClick={handleSubmit} color="primary">
+                  Submit
+                          </Button>
               </div>
             </div>
-            <div className={classes.pad}>
-              <Button type="button" variant="contained" onClick={handleSubmit} color="primary">
-                Submit
-                          </Button>
-            </div>
-
           </FormControl>
         </Paper>
       </Container>
