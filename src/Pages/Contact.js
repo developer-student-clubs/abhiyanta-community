@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     },
     formControl: {
         margin: theme.spacing(1),
-        minWidth: " 100%",
+        minWidth: "100%",
 
     },
     chips: {
@@ -36,8 +36,8 @@ const useStyles = makeStyles((theme) => ({
         paddingBottom: 40
     },
     paper: {
-        minWidth: "100%",
-        maxWidth: "100%",
+        minWidth: 1103,
+        maxWidth: 1103,
         padding: 20,
         marginLeft: 'auto',
         marginRight: 'auto',
