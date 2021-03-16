@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles, ThemeProvider } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
-import Button from '@material-ui/core/Button';
+import Button from "@material-ui/core/Button";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import { createMuiTheme } from "@material-ui/core/styles";
@@ -71,34 +71,55 @@ function ImgMediaCard(props) {
             <ThemeProvider theme={fonttheme}>
               <Typography variant="body2" component="p">
                 {props.member.content} <br /> <br />
+                {!props.member.current ? (
+                  <div>
+                    {props.member.conduct} <br />
+                    {!props.member.jury ? null : (
+                      <div>{props.member.jury}</div>
+                    )}{" "}
+                    <br />
+                    {props.member.platform}
+                  </div>
+                ) : null}
+                {props.member.current ? (
+                  <div>
+                    {props.member.add0} <br />
+                    {props.member.add1} <br />
+                    {props.member.add2} <br /> <br />
+                    {props.member.add3} <br /> <br />
+                    {props.member.date1} <br />
+                    {props.member.date2} <br /> <br />
+                  </div>
+                ) : null}
               </Typography>
+              {props.member.current ? (
+                <div>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    href="https://forms.gle/EbuqBZfUHS7WYN7r6"
+                  >
+                    Register
+                  </Button>
+                  <Button
+                    variant="contained"
+                    color="secondary"
+                    href="https://youtu.be/j-irhD-VMIc"
+                  >
+                    Video
+                  </Button>
+                </div>
+              ) : null}
 
-              <Typography variant="body2" component="p">
-                {props.member.add1} <br />
-                {props.member.add2}
-              </Typography>
-
-              <Typography variant="body2" component="p">
-                {props.member.conduct} <br /> <br />
-                {props.member.date1}<br/>
-                {props.member.date1}
-              </Typography>
-
-              <Typography variant="body2" component="p">
-                {props.member.platform} <br />
-              </Typography>
-              {props.member.current? <Button variant="contained" color="primary" href="https://forms.gle/EbuqBZfUHS7WYN7r6">
-    Regiseter
-</Button>:null}
-             
+              <Typography variant="body2" component="p"></Typography>
             </ThemeProvider>
           </CardContent>
         </div>
         <CardMedia
           component="img"
-          image={props.member.image}          
+          image={props.member.image}
           alt="project image"
-          style = {{width : 350}}
+          style={{ width: 350 }}
           title="project image"
         />
       </Card>
