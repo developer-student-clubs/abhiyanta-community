@@ -68,30 +68,6 @@ function ImgMediaCard(props) {
               {props.member.title}
             </Typography>
 
-            <ThemeProvider theme={fonttheme}>
-              <Typography variant="body2" component="p">
-                {props.member.content} <br /> <br />
-                {!props.member.current ? (
-                  <div>
-                    {props.member.conduct} <br />
-                    {!props.member.jury ? null : (
-                      <div>{props.member.jury}</div>
-                    )}{" "}
-                    <br />
-                    {props.member.platform}
-                  </div>
-                ) : null}
-                {props.member.current ? (
-                  <div>
-                    {props.member.add0} <br />
-                    {props.member.add1} <br />
-                    {props.member.add2} <br /> <br />
-                    {props.member.add3} <br /> <br />
-                    {props.member.date1} <br />
-                    {props.member.date2} <br /> <br />
-                  </div>
-                ) : null}
-              </Typography>
               {props.member.current ? (
                 <div>
                   <Button
@@ -110,6 +86,31 @@ function ImgMediaCard(props) {
                   </Button>
                 </div>
               ) : null}
+            <ThemeProvider theme={fonttheme}>
+              <Typography variant="body2" component="p">
+                <br />
+                {props.member.content} <br /> <br />
+                {!props.member.current ? (
+                  <div>
+                    {props.member.conduct} <br />
+                    {!props.member.jury ? null : (
+                      <div>{props.member.jury}</div>
+                    )}{" "}
+                    <br />
+                    {props.member.platform}
+                  </div>
+                ) : null}
+                {props.member.current ? (
+                  <div>
+                    {props.member.add0} <br />
+                    {props.member.add1} <br />
+                    {props.member.add2} <br /> <br />
+                    {props.member.add3} <br /> <br />
+                    {props.member.date1} <br />
+                    {props.member.date2} <br /> 
+                  </div>
+                ) : null}
+              </Typography>
 
               <Typography variant="body2" component="p"></Typography>
             </ThemeProvider>
