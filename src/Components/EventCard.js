@@ -77,13 +77,13 @@ function ImgMediaCard(props) {
                 >
                   Register
                   </Button>
-                <Button
+                {/* <Button
                   variant="contained"
                   color="secondary"
                   href="https://youtu.be/j-irhD-VMIc"
                 >
                   Video
-                  </Button>
+                  </Button> */}
               </div>
             ) : null}
             <ThemeProvider theme={fonttheme}>
