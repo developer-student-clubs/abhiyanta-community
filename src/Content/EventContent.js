@@ -4,10 +4,10 @@ export const event = [
     Events: [
       {
         title: "Art of Videography (22nd May 2021)",
-        image: process.env.PUBLIC_URL + "/Assets/Event/current/4.png",
+        image: process.env.PUBLIC_URL + "/Assets/Event/current/4.jpg",
 
         content:
-          "Hello Folks, Too bored on vacation !!?  Don’t worry Community of innovators are back again with exciting video editing and designing events- An Art of Videography.",
+          "Hello Folks, Too bored on vacation !!?  Don’t worry, Abhiyanta Community-Community of innovators are back again with exciting video editing and designing events- An Art of Videography.",
         add0: "This event consist of two exciting rounds,",
         add1:
           "Round I: Video creation and designing challenge in a creative and attractive manner !!",
@@ -15,7 +15,7 @@ export const event = [
         add3:
           "Participate now and win exciting prizes with deserving certificates. Don’t miss this thriller opportunity, limited seats are available.",
         date1: "Date : 22nd May,  2021- 23rd May, 2021 (48 hrs) ",
-        date2: "Last date of registration: 21st May,2021 ",
+        date2: "Last date of registration: 21st May,2021",
         current: true,
       },
     ],
