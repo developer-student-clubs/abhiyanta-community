@@ -68,24 +68,24 @@ function ImgMediaCard(props) {
               {props.member.title}
             </Typography>
 
-              {props.member.current ? (
-                <div>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    href="https://forms.gle/EbuqBZfUHS7WYN7r6"
-                  >
-                    Register
+            {props.member.current ? (
+              <div>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  href="https://forms.gle/N6XsGUXDCknikM4K9"
+                >
+                  Register
                   </Button>
-                  <Button
-                    variant="contained"
-                    color="secondary"
-                    href="https://youtu.be/j-irhD-VMIc"
-                  >
-                    Video
-                  </Button>
-                </div>
-              ) : null}
+                {/* <Button
+                  variant="contained"
+                  color="secondary"
+                  href="https://youtu.be/j-irhD-VMIc"
+                >
+                  Video
+                  </Button> */}
+              </div>
+            ) : null}
             <ThemeProvider theme={fonttheme}>
               <Typography variant="body2" component="p">
                 <br />
@@ -107,7 +107,7 @@ function ImgMediaCard(props) {
                     {props.member.add2} <br /> <br />
                     {props.member.add3} <br /> <br />
                     {props.member.date1} <br />
-                    {props.member.date2} <br /> 
+                    {props.member.date2} <br />
                   </div>
                 ) : null}
               </Typography>
