@@ -3,8 +3,8 @@ export const event = [
     Category: "Current Events",
     Events: [
       {
-        title: "Art of Videography (21 May 2021)",
-        image: process.env.PUBLIC_URL + "/Assets/Event/current/3.jpg",
+        title: "Art of Videography (22nd May 2021)",
+        image: process.env.PUBLIC_URL + "/Assets/Event/current/4.png",
 
         content:
           "Hello Folks, Too bored on vacation !!?  Don’t worry Community of innovators are back again with exciting video editing and designing events- An Art of Videography.",
@@ -14,8 +14,8 @@ export const event = [
         add2: "Round II: Top 5 candidates will be selected to the next surprising event with deserving rewards!!",
         add3:
           "Participate now and win exciting prizes with deserving certificates. Don’t miss this thriller opportunity, limited seats are available.",
-        date1: "Date : 21st May,  2021- 22nd May, 2021 (48 hrs) ",
-        date2: "Last date of registration: 20th May,2021 ",
+        date1: "Date : 22nd May,  2021- 23rd May, 2021 (48 hrs) ",
+        date2: "Last date of registration: 21st May,2021 ",
         current: true,
       },
     ],
