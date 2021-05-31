@@ -4,6 +4,7 @@ export const event = [
     Events: [
       {
         title: "1 Year Anniversary Celebration (5th June 2021)",
+        image: process.env.PUBLIC_URL + "/Assets/Event/current/5.jpg",
         content: "Hello Everyone, Greetings from Abhiyanta Community !!",
         add0: "We’re happy to announce our 1st Year Anniversary and invite you to celebrate this auspicious occasion with us. We have great seminars and events lined-up. We’re doing our best to create a unique platform and to provide a practical based learning ecosystem, and the results speak for themselves.",
         add1: "Abhiyanta Community is organizing a two day workshop, “Learning things differently” on 5th June 2021 from 10:00 AM onwards. Details for the day-wise plan are mentioned below.",
