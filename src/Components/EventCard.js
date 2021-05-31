@@ -73,7 +73,7 @@ function ImgMediaCard(props) {
                 <Button
                   variant="contained"
                   color="primary"
-                  href="https://forms.gle/N6XsGUXDCknikM4K9"
+                  href="https://forms.gle/NPBbSDEfzPwWXfEh6"
                 >
                   Register
                   </Button>
@@ -103,11 +103,17 @@ function ImgMediaCard(props) {
                 {props.member.current ? (
                   <div>
                     {props.member.add0} <br />
-                    {props.member.add1} <br />
-                    {props.member.add2} <br /> <br />
+                    {props.member.add1} <br /><br />
+                    <b>{props.member.add2}</b> <br /> <br />
+                    <b>{props.member.date1}</b> <br />
                     {props.member.add3} <br /> <br />
-                    {props.member.date1} <br />
-                    {props.member.date2} <br />
+                    <b>{props.member.add4}</b> <br /><br />
+                    <b>{props.member.date2}</b> <br />
+                    {props.member.add5} <br /> <br />
+                    {props.member.add6} <br /> <br /><br /><br />
+                    <b>{props.member.add7}</b> <br />
+                    { props.member.add8} < br /> <br />
+
                   </div>
                 ) : null}
               </Typography>
@@ -124,7 +130,7 @@ function ImgMediaCard(props) {
           title="project image"
         />
       </Card>
-    </div>
+    </div >
   );
 }
 
