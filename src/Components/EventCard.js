@@ -73,7 +73,7 @@ function ImgMediaCard(props) {
                 <Button
                   variant="contained"
                   color="primary"
-                  href="https://forms.gle/NPBbSDEfzPwWXfEh6"
+                  href="https://forms.gle/ti73qgNS8ZfeYRK86"
                 >
                   Register
                   </Button>
@@ -102,17 +102,22 @@ function ImgMediaCard(props) {
                 ) : null}
                 {props.member.current ? (
                   <div>
-                    {props.member.add0} <br />
-                    {props.member.add1} <br /><br />
-                    <b>{props.member.add2}</b> <br /> <br />
-                    <b>{props.member.date1}</b> <br />
-                    {props.member.add3} <br /> <br />
-                    <b>{props.member.add4}</b> <br /><br />
-                    <b>{props.member.date2}</b> <br />
-                    {props.member.add5} <br /> <br />
-                    {props.member.add6} <br /> <br /><br /><br />
-                    <b>{props.member.add7}</b> <br />
-                    { props.member.add8} < br /> <br />
+                    {props.member.add0} <br /><br />
+                    {props.member.add1} <br />
+                    {props.member.add2} <br /> <br />
+                    {props.member.add3} <br /> 
+                    {props.member.add4} <br />
+                    {props.member.add5} <br />
+                    {props.member.add6} <br /> 
+                    {props.member.add7} <br />
+                    {props.member.add8} < br /> 
+                    {props.member.add9} < br /> <br />
+                    {props.member.add10} < br /> <br />
+                    {props.member.date1 }<br /> <br />
+                    {props.member.add11} <br/>
+                    {props.member.add12} <br/> <br />
+                    {props.member.add13} <br/>
+                    {props.member.date2} <br />
 
                   </div>
                 ) : null}
