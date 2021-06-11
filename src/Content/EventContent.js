@@ -3,7 +3,7 @@ export const event = [
     Category: "Current Events",
     Events: [
       {
-        title: "Image processing with OpenCV (13th Jume 2021)",
+        title: "Image processing with OpenCV (13th June 2021)",
         image: process.env.PUBLIC_URL + "/Assets/Event/current/6.png",
         content: "Hello innovators !!!",
         add0: "Looking for a rock solid start to image processing ?",
