@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles, ThemeProvider } from "@material-ui/core/styles";
 import { Card,CardActions,CardContent,CardMedia } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
-import { Rating } from '@material-ui/lab';
+// import { Rating } from '@material-ui/lab';
 import { IconButton } from '@material-ui/core';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
 
 function ImgMediaCard(props) {
   const classes = useStyles();
-  const displayStars = props.index === 0 ? false : true;
+  // const displayStars = props.index === 0 ? false : true;
   return (
     <div>
       <Card className={classes.root}>
