@@ -65,13 +65,13 @@ function ImgMediaCard(props) {
           <IconButton href={props.member.Github}>
             <GitHubIcon fontSize="small"/>
           </IconButton>
-          { displayStars ? <Rating
+          {/* { displayStars ? <Rating
             value={props.member.Stars}
             size={"small"}
             style={{color:"white", marginLeft: 'auto', padding:10}}
             precision={0.5}
             readOnly
-          /> : null}
+          /> : null} */}
         </CardActions>
       </Card>
     </div>

@@ -21,13 +21,13 @@ export const Items = [
     title: "Robotics",
     description:
       "Network of physical objects (things) that are embedded with sensors, software, and other technologies for the purpose of connecting and exchanging data over the Internet",
-    image: process.env.PUBLIC_URL + "/Assets/rbt.png",
+      image: process.env.PUBLIC_URL + "/Assets/rbt.png",
   },
   {
     title: "Control System",
     description:
       "A control system manages, commands, directs, or regulates the behavior of other devices or systems using control loops",
-    image: process.env.PUBLIC_URL + "/Assets/CS.png",
+      image: process.env.PUBLIC_URL + "/Assets/CS.png",
   },
   {
     title: "Image Processing",
