@@ -2,29 +2,23 @@ export const event = [
   {
     Category: "Current Events",
     Events: [
-           //     title: "Image processing with OpenCV (13th June 2021)",
-    //     image: process.env.PUBLIC_URL + "/Assets/Event/current/6.png",
-    //     content: "Hello innovators !!!",
-    //     add0: "Looking for a rock solid start to image processing ?",
-    //     add1: "Abhiyanta community is back with a real time application based hands-on workshop ",
-    //     add2: "Presented by Kathan Shah",
-    //     add3: "Topic to be covered:",
-    //     add4: "- Introduction to python in general",
-    //     add5: "- Introduction to computer vision",
-    //     add6: "- Image reading & plotting in different color-space",
-    //     add7: "- Threshold of image  - color tracking algorithm",
-    //     add8: "- Border enhancing with Contour feature",
-    //     add9: "- Build real time application with OpenCV (element of surprise)",
-    //     add10: "Don't miss the opportunity, Register your self.",
-    //     date1: "Last date of registration: 12th June 2021",
-    //     add11: "Event timing: 10:30 AM to 12:00 PM",
-    //     add12: "                      01:30 PM to 03:00 PM",
-    //     add13: "Duration: 3 hours",
-    //     date2: "Date: 13th June (Sunday)",
+      {
+        title: "Introduction to Abhiyanta ",
+        title2:"(30th Sept 2021)",
+        image: process.env.PUBLIC_URL + "/Assets/Event/current/7.jpg",
+        content: "Hello innovators !!",
+        add0: "Abhiyanta Community strives to create an environment for ",
+        add1: "innovators and enthusiasts, where they learn, innovate and implement their ideas together. We intend to ",
+        add2: "facilitate overall growth of individuals by collaborating with other platforms.",
+        add3: "We also maintain a creative work environment, which respects diversity, new ideas",
+        add4: "and hard work.",
+        add5: "We are pleased  introduce our community and share our experience",
+        date1: "Date: 30th Sept 2021",
+        date2: "Last Date of Registration: 29th Sept 2021 ",
 
         
-    //    // current: true,
-    //   },
+        current: true,
+      },
     ],
   },
   {
@@ -32,7 +26,7 @@ export const event = [
     Events: [
        
     {
-        title: "Image processing with OpenCV (13th June 2021)",
+        title: "Image rocessing with OpenCV (13th June 2021)",
         image: process.env.PUBLIC_URL + "/Assets/Event/current/6.png",
         content: "Hello innovators !!! Looking for a rock solid start to image processing ?Abhiyanta community is back with a real time application based hands-on workshop Presented by Kathan Shah Topic to be covered ,Introduction to python in general,Introduction to computer vision,Image reading & plotting in different color-space, Threshold of image  - color tracking algorithm, Border enhancing with Contour feature",
         date2: "Date: 13th June (Sunday)",
@@ -59,7 +53,8 @@ export const event = [
       },
 
       {
-        title: "Art of Videography (22nd May 2021)",
+        title: "Art of Videography ",
+        title2:"(22nd May 2021)",
         image: process.env.PUBLIC_URL + "/Assets/Event/past/4.jpg",
 
         content:
@@ -74,7 +69,8 @@ export const event = [
         date2: "Last date of registration: 21st May,2021",
       },
       {
-        title: "Basic Electronics Battle (21 March 2021)",
+        title: "Basic Electronics Battle ",
+        title2: "(21st March 2021)",
         image: process.env.PUBLIC_URL + "/Assets/Event/past/3.jpg",
 
         content:
@@ -84,7 +80,8 @@ export const event = [
         platform: "Platform: Google Meet",
       },
       {
-        title: "e-Yantra awareness program (14 August 2020)",
+        title: "e-Yantra awareness program ",
+        title2: "(14th August 2020)",
         image: process.env.PUBLIC_URL + "/Assets/Event/past/1.jpg",
         content:
           "Online webinar to spread awareness regarding various competitions conducted by e-yantra. E-yantra conducts many exciting competitions and hackathons such as eYRC and eYIC. The speakers are 2nd place holder of the eYRC robotics competition in the theme of Biped Patrol.",
@@ -92,7 +89,8 @@ export const event = [
         platform: "Platform: Google Meet",
       },
       {
-        title: "Convince Investors’ (06 December 2020)",
+        title: "Convince Investors’ ",
+        title2: "(06th December 2020)",
         image: process.env.PUBLIC_URL + "/Assets/Event/past/2.jpg",
         content:
           "Online competition where teams present their project to potential investors. Teams which were working since past 2 months on industry-level projects get a chance to market their project in front of experienced jury members from the industry.",

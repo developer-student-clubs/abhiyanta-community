@@ -65,7 +65,8 @@ function ImgMediaCard(props) {
         <div className={classes.details}>
           <CardContent className={classes.contentTheme}>
             <Typography gutterBottom variant="h5" component="h2">
-              {props.member.title}
+              {props.member.title}<br/>
+              {props.member.title2}
             </Typography>
 
             {props.member.current ? (
@@ -73,7 +74,7 @@ function ImgMediaCard(props) {
                 <Button
                   variant="contained"
                   color="primary"
-                  href="https://forms.gle/ti73qgNS8ZfeYRK86"
+                  href="https://docs.google.com/forms/d/1MZok8CC2HS3nP3DJ2FpmpCgFUC_ZTsz-hZ52O4Tz8-k/edit"
                 >
                   Register
                   </Button>
@@ -102,21 +103,13 @@ function ImgMediaCard(props) {
                 ) : null}
                 {props.member.current ? (
                   <div>
-                    {props.member.add0} <br /><br />
+                    {props.member.add0} <br />
                     {props.member.add1} <br />
-                    {props.member.add2} <br /> <br />
+                    {props.member.add2}
                     {props.member.add3} <br /> 
-                    {props.member.add4} <br />
-                    {props.member.add5} <br />
-                    {props.member.add6} <br /> 
-                    {props.member.add7} <br />
-                    {props.member.add8} < br /> 
-                    {props.member.add9} < br /> <br />
-                    {props.member.add10} < br /> <br />
-                    {props.member.date1 }<br /> <br />
-                    {props.member.add11} <br/>
-                    {props.member.add12} <br/> <br />
-                    {props.member.add13} <br/>
+                    {props.member.add4} <br /><br />
+                    {props.member.add5} <br /><br />
+                    {props.member.date1 }<br /><br />
                     {props.member.date2} <br />
 
                   </div>
