@@ -12,9 +12,10 @@ export const event = [
         add2: "facilitate overall growth of individuals by collaborating with other platforms.",
         add3: "We also maintain a creative work environment, which respects diversity, new ideas",
         add4: "and hard work.",
-        add5: "We are pleased  introduce our community and share our experience",
-        date1: "Date: 30th Sept 2021",
+        add5: "We are pleased to introduce our community and share our experience",
+        date1: "Date: 30th Sept 2021 (8:45 P.M. Onwards) ",
         date2: "Last Date of Registration: 29th Sept 2021 ",
+        add6: "Platform: Google Meet",
 
         
         current: true,

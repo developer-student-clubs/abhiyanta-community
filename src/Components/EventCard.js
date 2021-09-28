@@ -109,8 +109,9 @@ function ImgMediaCard(props) {
                     {props.member.add3} <br /> 
                     {props.member.add4} <br /><br />
                     {props.member.add5} <br /><br />
-                    {props.member.date1 }<br /><br />
-                    {props.member.date2} <br />
+                    <b>{props.member.date1 }</b><br /><br />
+                    {props.member.date2} <br /><br/>
+                    {props.member.add6} <br />
 
                   </div>
                 ) : null}
