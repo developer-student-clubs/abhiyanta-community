@@ -74,7 +74,7 @@ function ImgMediaCard(props) {
                 <Button
                   variant="contained"
                   color="primary"
-                  href="https://docs.google.com/forms/d/17vSaUkvuQFQup2xcgy6XUZOAExCLIH7QQXv-oNHYyko/edit?"
+                  href="https://docs.google.com/forms/d/17vSaUkvuQFQup2xcgy6XUZOAExCLIH7QQXv-oNHYyko/viewform?"
                 >
                   Register
                   </Button>
@@ -109,7 +109,7 @@ function ImgMediaCard(props) {
                     {props.member.add3} <br /><br/>
                     {props.member.add4} <br /><br />
                     <b>{props.member.date1 }</b><br /><br />
-                    <b>{props.member.date2} </b><br /><br/>
+                    <b>{props.member.date2}</b> 
 
                   </div>
                 ) : null}

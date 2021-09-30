@@ -12,6 +12,7 @@ export const event = [
         add4: "This time, Abhiyanta Community is all set to welcome you even with your teammates and your ambitious project ideas! ",
         date1: "Last date for Registartion: 5 October 2021",
         date2: "Dates for The Interview: 7,8,9 October 2021",
+        
         current: true,
       },
     ],
@@ -20,15 +21,16 @@ export const event = [
     Category: "Past Events",
     Events: [
 
-    {
-      title: "Introduction to Abhiyanta ",
+      {
+        title: "Introduction to Abhiyanta ",
         title2:"(30th Sept 2021)",
         image: process.env.PUBLIC_URL + "/Assets/Event/current/7.jpg",
         content: "Hello innovators !! Abhiyanta Community strives to create an environment for innovators and enthusiasts, where they learn, innovate and implement their ideas together. We intend to facilitate overall growth of individuals by collaborating with other platforms. We also maintain a creative work environment, which respects diversity, new ideas and hard work. We are pleased to introduce our community and share our experience.",
         date1: "Date: 30th Sept 2021 (8:45 P.M. Onwards) ",
         date2: "Last Date of Registration: 29th Sept 2021 ",
         add6: "Platform: Google Meet",
-    },
+
+      },
        
     {
         title: "Image rocessing with OpenCV (13th June 2021)",
