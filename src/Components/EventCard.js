@@ -74,7 +74,7 @@ function ImgMediaCard(props) {
                 <Button
                   variant="contained"
                   color="primary"
-                  href="https://docs.google.com/forms/d/17vSaUkvuQFQup2xcgy6XUZOAExCLIH7QQXv-oNHYyko/viewform?chromeless=1&edit_requested=true"
+                  href="https://docs.google.com/forms/d/17vSaUkvuQFQup2xcgy6XUZOAExCLIH7QQXv-oNHYyko/viewform?"
                 >
                   Register
                   </Button>
