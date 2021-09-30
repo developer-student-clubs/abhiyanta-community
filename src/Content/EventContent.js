@@ -25,7 +25,7 @@ export const event = [
         title: "Introduction to Abhiyanta ",
         title2:"(30th Sept 2021)",
         image: process.env.PUBLIC_URL + "/Assets/Event/current/7.jpg",
-        content: "Hello innovators !! Abhiyanta Community strives to create an environment for innovators and enthusiasts, where they learn, innovate and implement their ideas together. We intend to facilitate overall growth of individuals by collaborating with other platforms. We also maintain a creative work environment, which respects diversity, new ideas and hard work. We are pleased to introduce our community and share our experience",
+        content: "Hello innovators !! Abhiyanta Community strives to create an environment for innovators and enthusiasts, where they learn, innovate and implement their ideas together. We intend to facilitate overall growth of individuals by collaborating with other platforms. We also maintain a creative work environment, which respects diversity, new ideas and hard work. We are pleased to introduce our community and share our experience.",
         date1: "Date: 30th Sept 2021 (8:45 P.M. Onwards) ",
         date2: "Last Date of Registration: 29th Sept 2021 ",
         add6: "Platform: Google Meet",
