@@ -2,39 +2,35 @@ export const Team = [
     {
         TeamName: "Core Team",
         TeamMembers: [
-         
-
-            {
-                Name: "Dhruv Kanyal",
-                Designation: "Chief Executive Officer",
-                Email: "dhruvkanyal111@gmail.com",
-                LinkedIn: "https://www.linkedin.com/in/dhruv-kanyal-956512180",
-                Github: "https://www.github.com/Dhruv118",
-                Photo: process.env.PUBLIC_URL + "/Assets/TeamPhotos/Members/Dhruv Kanyal.jpg",
-            },
-
-            
             {
                 Name: "Namra Shastri",
-                Designation: "Chief Technology Officer",
+                Designation: "Chief Executive Officer",
                 Email: "namrashastri001@gmail.com",
                 LinkedIn: "https://www.linkedin.com/in/namra-shastri-14321b183",
                 Github: "https://www.github.com/Namra561",
                 Photo: process.env.PUBLIC_URL + "/Assets/TeamPhotos/Members/namra.jpg",
+            },
+            {
+                Name: "Prit Varmora",
+                Designation: "Chief Technology Officer",
+                Email: "pritjvarmora14044@gmail.com",
+                LinkedIn: "https://www.linkedin.com/in/prit-varmora",
+                Github: "https://www.github.com/PRITVARMORA",
+                Photo: process.env.PUBLIC_URL + "/Assets/TeamPhotos/Members/Prit Varmora.jpg",
+            }, 
+            {
+                Name: "Minu Chaudhary",
+                Designation: "Chief Management Officer",
+                Email: "namrashastri001@gmail.com",
+                LinkedIn: "https://www.linkedin.com/in/minu-chaudhary/",
+                Github: "https://github.com/Minu-Chaudhary",
+                Photo: process.env.PUBLIC_URL + "/Assets/TeamPhotos/CoreTeam/Minu Chaudhary.jpg",
             },
         ]
     },
     {
         TeamName: "Lead Team",
         TeamMembers: [
-            {
-                Name: "Prit Varmora",
-                Designation: "Technical Lead",
-                Email: "pritjvarmora14044@gmail.com",
-                LinkedIn: "https://www.linkedin.com/in/prit-varmora",
-                Github: "https://www.github.com/PRITVARMORA",
-                Photo: process.env.PUBLIC_URL + "/Assets/TeamPhotos/Members/Prit Varmora.jpg",
-            }, 
              {
                 Name: "Rishav Singh",
                 Designation: "Technical Lead",
@@ -52,7 +48,6 @@ export const Team = [
                 Github: "https://www.github.com/379-kash",
                 Photo: process.env.PUBLIC_URL + "/Assets/TeamPhotos/Members/Kashyap Joshi.jpg",
             },
-            
             
              {
                 Name: "Het Shah",
@@ -105,14 +100,6 @@ export const Team = [
                 Github: "https://github.com/Jainam261",
                 Photo: process.env.PUBLIC_URL + "/Assets/TeamPhotos/Members/jainam.jpg",
             },
-
-            {
-                Name: "Harekrishna ",
-                LinkedIn: "https://www.linkedin.com/in/harekrishna-ray-126782197/",
-                Github: "https://github.com/harekrishnaray",
-                Photo: process.env.PUBLIC_URL + "/Assets/TeamPhotos/Members/harekrishna.png",
-            },
-
         ],
     }
 ]
