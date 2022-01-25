@@ -21,7 +21,7 @@ export const Team = [
             {
                 Name: "Minu Chaudhary",
                 Designation: "Chief Management Officer",
-                Email: "namrashastri001@gmail.com",
+                Email: "minuchaudhary06@gmail.com",
                 LinkedIn: "https://www.linkedin.com/in/minu-chaudhary/",
                 Github: "https://github.com/Minu-Chaudhary",
                 Photo: process.env.PUBLIC_URL + "/Assets/TeamPhotos/CoreTeam/Minu Chaudhary.jpg",
