@@ -34,7 +34,7 @@ export const Team = [
              {
                 Name: "Rishav Singh",
                 Designation: "Technical Lead",
-                Email: "rsh04613@gmail.com",
+                Email: "rishav.zero@pm.me",
                 LinkedIn: "https://www.linkedin.com/in/rishav-singh011",
                 Github: "https://www.github.com/rishav-singh-0",
                 Photo: process.env.PUBLIC_URL + "/Assets/TeamPhotos/Members/Rishav Singh.jpg",
@@ -83,6 +83,7 @@ export const Team = [
         TeamMembers: [
             {
                 Name: "Bhavina Chechani",
+                Email: "chechanibhavina@gmail.com",
                 LinkedIn: "https://www.linkedin.com/in/bhavina-chechani-78a0131b6/",
                 Github: "https://github.com/BhavinaChechani",
                 Photo: process.env.PUBLIC_URL + "/Assets/TeamPhotos/Members/bhavina.jpg",
@@ -90,14 +91,51 @@ export const Team = [
 
             {
                 Name: "Shrey Awasthi",
+                Email: "shreyawasthi2001@gmail.com",
                 LinkedIn: "https://www.linkedin.com/in/shrey-awasthi-1345a41b4",
                 Github: "https://www.github.com/shrey1228",
                 Photo: process.env.PUBLIC_URL + "/Assets/TeamPhotos/Members/Shrey Awasthi.jpg",
             },
             {
-                Name: "Jainam shah",
+                Name: "Jainam Shah",
+                Email: "sjainam261@gmail.com",
                 LinkedIn: "https://www.linkedin.com/in/jainam-shah-5921581b4",
                 Github: "https://github.com/Jainam261",
+                Photo: process.env.PUBLIC_URL + "/Assets/TeamPhotos/Members/jainam.jpg",
+            },
+            {
+                Name: "Shloka Gandhi",
+                Email: "shlokagandhi9@gmail.com",
+                LinkedIn: "https://www.linkedin.com/in/shloka-gandhi-4b07681ab",
+                Github: "https://github.com/Shloka2707",
+                Photo: process.env.PUBLIC_URL + "/Assets/TeamPhotos/Members/jainam.jpg",
+            },
+            {
+                Name: "Priyal Desai",
+                Email: "priyald1410@gmail.com",
+                LinkedIn: "https://www.linkedin.com/in/priyal-desai-579132226",
+                Github: "https://github.com/Priyal1410",
+                Photo: process.env.PUBLIC_URL + "/Assets/TeamPhotos/Members/jainam.jpg",
+            },
+            {
+                Name: "Rushikumar Bhatt",
+                Email: "rushibhatt03@gmail.com",
+                LinkedIn: "https://www.linkedin.com/in/rushikumar-bhatt-a2278021b/",
+                Github: "https://github.com/black-cat03",
+                Photo: process.env.PUBLIC_URL + "/Assets/TeamPhotos/Members/jainam.jpg",
+            },
+            {
+                Name: "Kiran Chaudhary",
+                Email: "kiranchaudhary537@gmail.com",
+                LinkedIn: "https://www.linkedin.com/in/kiran-chaudhary-27ab241bb",
+                Github: "https://github.com/Kiranchaudhary537",
+                Photo: process.env.PUBLIC_URL + "/Assets/TeamPhotos/Members/jainam.jpg",
+            },
+            {
+                Name: "Neha Chaubey ",
+                Email: "nchaubey123@gmail.com",
+                LinkedIn: "https://www.linkedin.com/in/nehachaubey23",
+                Github: "https://github.com/neha2351",
                 Photo: process.env.PUBLIC_URL + "/Assets/TeamPhotos/Members/jainam.jpg",
             },
         ],
