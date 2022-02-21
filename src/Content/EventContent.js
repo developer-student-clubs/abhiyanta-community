@@ -2,25 +2,11 @@ export const event = [
   {
     Category: "Current Events",
     Events: [
-      {
-        title: "Phase III Recruitment ",
-        image: process.env.PUBLIC_URL + "/Assets/Event/current/8.png",
-        content: "Hello there !!",
-        add0: "Greetings from team Abhiyanta. ",
-        add1: "The next phase of recruitment is here! ",
-        add2: "Join our community to excel your proficiency at diversified tech and non-tech domains. ",
-        add4: "This time, Abhiyanta Community is all set to welcome you even with your teammates and your ambitious project ideas! ",
-        date1: "Last date for Registartion: 5 October 2021",
-        date2: "Dates for The Interview: 7,8,9 October 2021",
-        
-        current: true,
-      },
     ],
   },
   {
     Category: "Past Events",
     Events: [
-
       {
         title: "Introduction to Abhiyanta ",
         title2:"(30th Sept 2021)",
