@@ -77,17 +77,21 @@ function ImgMediaCard(props) {
                 <Button
                   variant="contained"
                   color="primary"
-                  href={props.member.link}
+                  href={props.member.registration_link}
                 >
                   Register
                   </Button>
-                {/* <Button
+              </div>
+            ) : null}
+            {props.member.current && props.member.video_link ? (
+              <div>
+                <Button
                   variant="contained"
                   color="secondary"
-                  href="https://youtu.be/j-irhD-VMIc"
+                  href={props.member.video_link}
                 >
                   Video
-                  </Button> */}
+                  </Button>
               </div>
             ) : null}
             <ThemeProvider theme={fonttheme}>

@@ -4,7 +4,9 @@
   title2: "Subtitle",
   image: process.env.PUBLIC_URL + "/Assets/Event/current/image.jpg",
   content: "Some description",
-  link: "link for event",
+  current: "True"
+  registration_link: "link for event",
+  video_link: "link for video",
 };
 */
 
