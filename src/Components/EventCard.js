@@ -6,6 +6,7 @@ import Button from "@material-ui/core/Button";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import { createMuiTheme } from "@material-ui/core/styles";
+import cx from 'classnames';
 
 let fonttheme = createMuiTheme();
 fonttheme.typography.body2 = {
@@ -63,7 +64,7 @@ function ImgMediaCard(props) {
   const dirr = props.side % 2 === 0 ? classes.root1 : classes.root;
 
   return (
-    <div className={classes.align, classes.linebreak}>
+    <div className={ cx(classes.align, classes.linebreak)}>
       <Card className={dirr}>
         <div className={classes.details}>
           <CardContent className={classes.contentTheme}>
