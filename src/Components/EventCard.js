@@ -6,6 +6,7 @@ import Button from "@material-ui/core/Button";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import { createMuiTheme } from "@material-ui/core/styles";
+import cx from 'classnames';
 
 let fonttheme = createMuiTheme();
 fonttheme.typography.body2 = {
@@ -27,6 +28,9 @@ const useStyles = makeStyles((theme) => ({
   },
   content: {
     flex: "1 0 auto",
+  },
+  linebreak: {
+    whiteSpace: 'pre-wrap',
   },
   cover: {
     width: "70%",
@@ -60,7 +64,7 @@ function ImgMediaCard(props) {
   const dirr = props.side % 2 === 0 ? classes.root1 : classes.root;
 
   return (
-    <div className={classes.align}>
+    <div className={ cx(classes.align, classes.linebreak)}>
       <Card className={dirr}>
         <div className={classes.details}>
           <CardContent className={classes.contentTheme}>
@@ -74,48 +78,28 @@ function ImgMediaCard(props) {
                 <Button
                   variant="contained"
                   color="primary"
-                  href="https://docs.google.com/forms/d/17vSaUkvuQFQup2xcgy6XUZOAExCLIH7QQXv-oNHYyko/viewform?"
+                  href={props.member.registration_link}
                 >
                   Register
                   </Button>
-                {/* <Button
+              </div>
+            ) : null}
+            {props.member.current && props.member.video_link ? (
+              <div>
+                <Button
                   variant="contained"
                   color="secondary"
-                  href="https://youtu.be/j-irhD-VMIc"
+                  href={props.member.video_link}
                 >
                   Video
-                  </Button> */}
+                  </Button>
               </div>
             ) : null}
             <ThemeProvider theme={fonttheme}>
               <Typography variant="body2" component="p">
                 <br />
-                {props.member.content} <br /> <br />
-                {!props.member.current ? (
-                  <div>
-                    {props.member.conduct} <br />
-                    {!props.member.jury ? null : (
-                      <div>{props.member.jury}</div>
-                    )}{" "}
-                    <br />
-                    {props.member.platform}
-                  </div>
-                ) : null}
-                {props.member.current ? (
-                  <div>
-                    {props.member.add0} <br />
-                    {props.member.add1} <br /><br/>
-                    {props.member.add2} 
-                    {props.member.add3} <br /><br/>
-                    {props.member.add4} <br /><br />
-                    <b>{props.member.date1 }</b><br /><br />
-                    <b>{props.member.date2}</b> 
-
-                  </div>
-                ) : null}
+                {props.member.content} <br />
               </Typography>
-
-              <Typography variant="body2" component="p"></Typography>
             </ThemeProvider>
           </CardContent>
         </div>
